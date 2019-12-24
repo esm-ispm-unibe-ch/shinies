@@ -5,15 +5,11 @@ FROM rocker/shiny:3.6.1
 
 RUN sudo apt update && sudo apt install -y vim tmux
 
-RUN R -e "install.packages('readxl')"
-
-RUN R -e "install.packages(c('shinythemes','gridExtra','ggpubr'))"
-
-RUN R -e "install.packages(c('kernlab','caret'))"
-
-RUN R -e "install.packages(c('shinyjs'))"
+RUN R -e "install.packages(c('shinyjs','kernlab','caret','readxl','shinythemes','gridExtra','ggpubr'))"
 
 COPY apps /srv/shiny-server/
+
+COPY shiny-server.conf /etc/shiny-server/
 
 EXPOSE 3838
 
