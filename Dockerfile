@@ -15,10 +15,10 @@
 ##tosku/cinemashiny:1.1
 FROM tosku/cinemashiny:1.0
 
-RUN sudo apt update && sudo apt upgrade && sudo apt install -y git
+RUN sudo apt update && sudo apt -y upgrade && sudo apt install -y git
 
 RUN cd /root && git clone https://github.com/esm-ispm-unibe-ch/shinies/ && \
-    cp shinies/apps/* /srv/shinyapps/ -r && rm -rf shinies
+    cp shinies/apps/* /srv/shiny-server/ -r && rm -rf shinies
 
 EXPOSE 3838
 
