@@ -13,9 +13,14 @@
 #COPY shiny-server.conf /etc/shiny-server/
 
 ##tosku/cinemashiny:1.1
-FROM tosku/cinemashiny:1.0
+#FROM tosku/cinemashiny:1.0
 
-RUN sudo apt update && sudo apt -y upgrade && sudo apt install -y git
+#RUN sudo apt update && sudo apt -y upgrade && sudo apt install -y git
+
+##tosku/cinemashiny:1.2
+FROM tosku/cinemashiny:1.1
+
+RUN R -e "install.packages(c('scatterpie','rdrop2'))"
 
 RUN cd /root && git clone https://github.com/esm-ispm-unibe-ch/shinies/ && \
     cp shinies/apps/* /srv/shiny-server/ -r && rm -rf shinies
