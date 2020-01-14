@@ -17,7 +17,7 @@ library(gridExtra)
 library(ggpubr)
 library(ggplot2)
 
-GraphdataF<-read_excel("C:/Users/kc19o338/Desktop/Real world predictions project/Data for the Graph7.xls")
+GraphdataF<-read_excel("Data_for_the_Graph7.xls")
 colnames(GraphdataF)<-c("Treatment","Predicted probability to relapse in 2 years %", "Baseline risk score")
 
 
@@ -45,10 +45,11 @@ server <- function(input, output, session) {
 
 
   })
-  table <- reactive(GraphdataF[(which(as.integer(GraphdataF$`Baseline risk score`) == as.integer(risk.score()))),])
-  table1<- reactive(table()[,1])
-  table2<- reactive(round(table()[,2],0))
-  table3<-reactive(table()[,3])
+
+  table0<- reactive(GraphdataF[(which(as.integer(GraphdataF$`Baseline risk score`) == as.integer(risk.score()))),])
+  table1<- reactive(table0()[,1])
+  table2<- reactive(round(table0()[,2],0))
+  table3<- reactive(table0()[,3])
 
   output$table<-renderDataTable(cbind(table1(),table2()))
 
