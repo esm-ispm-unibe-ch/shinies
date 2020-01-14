@@ -17,7 +17,7 @@ library(gridExtra)
 library(ggpubr)
 library(ggplot2)
 
-GraphdataF<-read_excel("./Data_for_the_Graph7.xls")
+GraphdataF<-read_excel("C:/Users/kc19o338/Desktop/Real world predictions project/Data for the Graph7.xls")
 colnames(GraphdataF)<-c("Treatment","Predicted probability to relapse in 2 years %", "Baseline risk score")
 
 
