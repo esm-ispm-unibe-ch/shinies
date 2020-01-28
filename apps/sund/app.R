@@ -50,7 +50,7 @@ marriage_choices <- list("Single (never married)" = 1,
 ui <- shinyUI(fluidPage(
   shinyjs::inlineCSS(list(body = "color:DarkBlue")),
   # Application title
-  titlePanel(h1("Prediction model in a pragmatic megatrial of acute treatment for major depression")),
+  titlePanel(h1("Prediction model in a pragmatic megatrial* of acute treatment for major depression")),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
@@ -160,7 +160,7 @@ ui <- shinyUI(fluidPage(
     mainPanel(
       
       tabsetPanel(id = 'gene set',
-                  tabPanel("Result", textOutput("text1"), textOutput("text2"), textOutput("text3"), uiOutput("blank"), plotOutput("plot1"), textOutput("text5"), uiOutput("blank2"), textOutput("text4"),
+                  tabPanel("Result", textOutput("text1"), textOutput("text2"), textOutput("text3"), uiOutput("blank"), plotOutput("plot1"), textOutput("text5"), uiOutput("blank2"), textOutput("text4"), br(), br(), htmlOutput("text6"),
                            tags$head(tags$style("#text4{color: blue;font-size: 25px;font-style:bold;} "))
                            
                            ),
@@ -1521,7 +1521,6 @@ server <- shinyServer(function(input, output) {
   })
     
   output$dataframe = renderTable({
-    
     data = getOutput()
     apply(data$dat1, 2, as.numeric)
   }, rownames = TRUE)
@@ -1549,6 +1548,11 @@ server <- shinyServer(function(input, output) {
   output$text5 = renderText({
     data = getOutput()
     data$text5
+  })
+  
+  output$text6 <- renderUI({
+    
+    HTML(paste0("* Kato T, Furukawa TA, Mantani A, Kurata K, Kubouchi H, Hirota S, Sato H, Sugishita K, Chino B, Itoh K, Ikeda Y, Shinagawa Y, Kondo M, Okamoto Y, Fujita H, Suga M, Yasumoto S, Tsujino N, Inoue T, Fujise N, Akechi T, Yamada M, Shimodera S, Watanabe N, Inagaki M, Miki K, Ogawa Y, Takeshima N, Hayasaka Y, Tajika A, Shinohara K, Yonemoto N, Tanaka S, Zhou Q, Guyatt GH & for the SUN(^_^)D Investigators (2018) Optimising first- and second-line treatment strategies for untreated major depressive disorder - the SUND study: a pragmatic, multi-centre, assessor-blinded randomised controlled trial.", "<b>", " BMC Medicine","</b>", ", 16, 103."))
   })
   
   output$plot1 = renderPlot({
