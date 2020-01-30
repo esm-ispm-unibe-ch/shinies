@@ -8,6 +8,11 @@ library(ggplot2)
 GraphdataF<-read.csv("Data_for_the_Graph7.csv")
 colnames(GraphdataF)<-c("Treatment","Predicted probability to relapse in 2 years %", "Baseline risk score")
 GraphdataF$`Predicted probability to relapse in 2 years %`<-round(GraphdataF$`Predicted probability to relapse in 2 years %`,1)
+GraphdataF$Treatment<-as.character(GraphdataF$Treatment)
+GraphdataF$Treatment[grepl('Glateramere Acetate', GraphdataF$Treatment)] <- 'Glatiramer Acetate'
+GraphdataF$Treatment<-as.factor(GraphdataF$Treatment)
+
+#GraphdataF$Treatment[which(GraphdataF$Treatment=="Glateramere Acetate")]<-c("Glatiramer Acetate")
 server <- function(input, output, session) {
   
   data <- reactive({
@@ -58,13 +63,13 @@ server <- function(input, output, session) {
    }
   )
    output$Ranking.Probabilities3 <- renderText({
-     paste(table4()[3,1], "with", table4()[3,2], "% to relapse.")
+     paste(table4()[3,1], "with", table4()[3,2], "% probability to relapse.")
      
    }
    )
    
    output$Ranking.Probabilities4 <- renderText({
-     paste(table4()[4,1], "with", table4()[4,2], "% to relapse")
+     paste(table4()[4,1], "with", table4()[4,2], "% probability to relapse")
      
    }
    )
@@ -85,7 +90,7 @@ server <- function(input, output, session) {
 }
 
 ui <-  fluidPage(theme=shinytheme("readable"),
-                 titlePanel(h1("Best Treatment for relapsing MS in two years")), # using strong as a direct tag
+                 titlePanel(h1("Prevention of relapses in patients with Relapsing-Remitting Multiple Sclerosis")), # using strong as a direct tag
                  #h1("Using textInput and checkboxInput")
                  sidebarLayout(
                    sidebarPanel(
@@ -106,7 +111,7 @@ ui <-  fluidPage(theme=shinytheme("readable"),
                      numericInput(inputId="SFPCSBL", label="Baseline SF-36 PCS",value=1, min=0,max=80, step=0.01),
                      numericInput(inputId="SFMCSBL", label="Baseline SF-36 MCS",value=1, min=0,max=80, step=0.001)),
                    
-                   mainPanel( textOutput("final.risk.score"),
+                   mainPanel( h5(textOutput("final.risk.score")),
                               h4("Plot of predicted probabilities to relapse in two years"),plotOutput("plot"), 
                               h4("Predicted probabilities to relapse in two years"), textOutput("Predicted.Probabilities"),
                               h4("Ranking of predicted probabilities to relapse in two years"),
