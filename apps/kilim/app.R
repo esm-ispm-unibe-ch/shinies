@@ -60,8 +60,8 @@ server <- shinyServer(function(input, output) {
   
   rate.pla.list <- unique(final$rate.pla)  
   outcome.selection <- c("NAUSEA", "HEADACHE", "DRY MOUTH", "INSOMNIA", "SEXUAL DYSFUNCTION","DIARRHOEA", "SUICIDAL IDEATION", "AGGRESSION", "ACCIDENTAL OVERDOSE")  
-  treatment.selection <- c("vortioxetine", "venlafaxine", "reboxetine", "mirtazapine", "fluoxetine", "duloxetine", "amitriptyline", "placebo")
-
+  treatment.selection <- c("drug G", "drug F","drug E","drug D","drug C","drug B","drug A", "placebo")
+  
   ## calculate adjust z-score
   getData <- reactive({
   
@@ -131,8 +131,8 @@ server <- shinyServer(function(input, output) {
                             level = treatment.selection,ordered = TRUE)
 
   final_data$Zscore2 <- final_data$Zscore #truncated zscore
-  final_data$Zscore2[final_data$Zscore2 < -2.5] = -2.5
-  final_data$Zscore2[final_data$Zscore2 > 2.5] = 2.5
+  final_data$Zscore2[final_data$Zscore2 < -3] = -3
+  final_data$Zscore2[final_data$Zscore2 > 3] = 3
 
   # add % sign
   aa <- function(x){ if(!is.na(x)){paste0(x, "%")} else{x}}
@@ -155,15 +155,17 @@ server <- shinyServer(function(input, output) {
   ggplot(final_data2, aes(outcome, drug)) + geom_tile(aes(fill = round(Zscore2,1)), colour = "white") + 
     geom_text(aes(label= event.rate), size = 6) +
     scale_fill_gradient2(low = "green", mid = "white", high = "red", na.value = "lightskyblue1", 
-                         breaks = c(-2.326348, -1.281552, 0, 1.281552, 2.326348), limits = c(-2.5, 2.5),
-                         labels = c("p < 0.01", "p = 0.1", "p = 1.00", "p = 0.1", "p < 0.01")) +
+                         breaks = c(-2.575829, -1.959964, -1.644854, 0, 1.644854, 1.959964, 2.575829), limits = c(-3, 3),
+                         labels = c("p < 0.01", "p = 0.05", "p = 0.1", "p = 1.00", "p = 0.1", "p = 0.05","p < 0.01")) +
+    guides(fill = guide_colourbar(barwidth = 0.5, barheight = 15)) +
     labs(x = "",y = "") +
     theme(legend.title = element_blank(),
           legend.position = "left",
-          axis.text.x = element_text(size = 12),
-          axis.text.y = element_text(size = 12),
-          legend.text = element_text(size = 12)) +
+          axis.text.x = element_text(size = 11),
+          axis.text.y = element_text(size = 11),
+          legend.text = element_text(size = 11)) +
     scale_x_discrete(position = "top") 
+  
   })
 })
 
