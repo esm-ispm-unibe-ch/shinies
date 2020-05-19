@@ -22,8 +22,8 @@ dfef_plac <- read.csv("data/plac-ef.csv", header = TRUE, stringsAsFactors = FALS
 dfac_plac <- read.csv("data/plac-ac.csv", header = TRUE, stringsAsFactors = FALSE)
 
 imgs_2d <- list(div(img(src = '2d_1990.jpg', height = "900px"), style = "margin-left: 10%"), div(img(src = '2d_1995.jpg', height = "900px"), style = "margin-left: 10%"), 
-               div(img(src = '2d_2000.jpg', height = "900px"), style = "margin-left: 10%"), div(img(src = '2d_2005.jpg', height = "900px"), style = "margin-left: 10%"),
-               div(img(src = '2d_2010.jpg', height = "900px"), style = "margin-left: 10%"), div(img(src = '2d_2016.jpg', height = "900px"), style = "margin-left: 10%"))
+                div(img(src = '2d_2000.jpg', height = "900px"), style = "margin-left: 10%"), div(img(src = '2d_2005.jpg', height = "900px"), style = "margin-left: 10%"),
+                div(img(src = '2d_2010.jpg', height = "900px"), style = "margin-left: 10%"), div(img(src = '2d_2016.jpg', height = "900px"), style = "margin-left: 10%"))
 imgs_tb <- list(div(img(src = '1990.jpg', height = "600px"), style = "margin-left: 7%"), div(img(src = '1995.jpg', height = "600px"), style = "margin-left: 7%"), 
                 div(img(src = '2000.jpg', height = "600px"), style = "margin-left: 7%"), div(img(src = '2005.jpg', height = "600px"), style = "margin-left: 7%"), 
                 div(img(src = '2010.jpg', height = "600px"), style = "margin-left: 7%"), div(img(src = '2016.jpg', height = "600px"), style = "margin-left: 7%"))
@@ -431,9 +431,9 @@ ui <- fluidPage(tags$head(tags$style(HTML("
                          strong("Please cite:", style = "color:white"),
                          p("Luo Y, Chaimani A, Furukawa TA, Kataoka Y, Ogawa Y, Cipriani A, Salanti G.
                             Visualizing the Evolution of Evidence: Cumulative Network Meta-Analyses of  
-                            New Generation Antidepressants in the Last 40 Years.", em(" (In submission)"), style = "font-size: 14px; color: white"),
-                         br(),
-                         strong("Copyright©2019 Department of Health Promotion and Human Behavior, 
+                            New Generation Antidepressants in the Last 40 Years.", em("Research Synthesis Methods"), 
+                           "2020 Apr;1–11. doi.org/ 10.1002/jrsm.1413.", style = "font-size: 14px; color: white"),
+                         strong("Copyright©2020 Department of Health Promotion and Human Behavior, 
                             Graduate School of Medicine, Kyoto University. All Rights Reserved.", style = "font-size: 15px;color:darkslategrey")
                 )        
                   ))
@@ -770,7 +770,7 @@ server <- function(input, output, session) {
   ##create 2D plot by using gglpot2
   output$twodplot <- renderPlot({
     if (any(grepl("placebo", defInput()$t)) == TRUE) {
-      ggplot(dator(), aes(x = ORef, y = ORac, colour = trts, label = trts)) + labs(x = "OR of efficacy", y = "OR of acceptability") +
+      ggplot(dator(), aes(x = ORef, y = ORac, colour = trts, label = trts)) + labs(x = "Efficacy (OR of response rate)", y = "Acceptability (OR of discontinuation)") +
         geom_point(aes(size = log(sample_ef + sample_ac))) + geom_point(data = datorp(), shape = 1, aes(size = log(sample_ef + sample_ac))) + 
         scale_y_continuous(trans = reverselog_trans(10), limits = c(2.2, 0.2), breaks = seq(2.2, 0.2, -0.2)) + 
         scale_x_continuous(limits = c(0.6, 3.6), breaks = seq(0.6, 3.6, 0.2), trans = "log10") +
@@ -778,7 +778,7 @@ server <- function(input, output, session) {
         geom_text_repel(data = dator(), point.padding = 0.4, force = 5, segment.size = 0.2) + 
         geom_hline(yintercept = 1, linetype = "dotted") + geom_vline(xintercept = 1, linetype = "dotted") + theme_bw() + theme(legend.position = "none")
     } else {
-      ggplot(dator(), aes(x = ORef, y = ORac, colour = trts, label = trts)) + labs(x = "OR of efficacy", y = "OR of acceptability") +
+      ggplot(dator(), aes(x = ORef, y = ORac, colour = trts, label = trts)) + labs(x = "Efficacy (OR of response rate)", y = "Acceptability (OR of discontinuation)") +
         geom_point(aes(size = log(sample_ef + sample_ac))) +
         scale_y_continuous(trans = reverselog_trans(10), limits = c(2.2, 0.2), breaks = seq(2.2, 0.2, -0.2)) + 
         scale_x_continuous(limits = c(0.6, 3.6), breaks = seq(0.6, 3.6, 0.2), trans = "log10") +
@@ -799,12 +799,12 @@ server <- function(input, output, session) {
     else {
       output$twodplot_flex <- renderPlot({
         if (any(grepl("placebo", defInput()$t)) == TRUE) {
-          ggplot(dator(), aes(x = ORef, y = ORac, colour = trts)) + labs(x = "OR of efficacy", y = "OR of acceptability") +
+          ggplot(dator(), aes(x = ORef, y = ORac, colour = trts)) + labs(x = "Efficacy (OR of response rate)", y = "Acceptability (OR of discontinuation)") +
             geom_point(aes(size = log(sample_ef + sample_ac))) + geom_point(data = datorp(), shape = 1, aes(size = log(sample_ef + sample_ac))) + scale_y_continuous(trans = "reverse") + 
             geom_text(aes(label = trts), hjust=1, vjust=2, check_overlap = T, data = dator()) + geom_text(aes(label = trts), hjust=1, vjust=2, check_overlap = T, data = datorp()) + theme_bw() + theme(legend.position = "none") + 
             geom_hline(yintercept = 1, linetype = "dotted") + geom_vline(xintercept = 1, linetype = "dotted")
         } else {
-          ggplot(dator(), aes(x = ORef, y = ORac, colour = trts)) + labs(x = "OR of efficacy", y = "OR of acceptability") +
+          ggplot(dator(), aes(x = ORef, y = ORac, colour = trts)) + labs(x = "Efficacy (OR of response rate)", y = "Acceptability (OR of discontinuation)") +
             geom_point(aes(size = log(sample_ef + sample_ac)))  + scale_y_continuous(trans = "reverse") + 
             geom_text(aes(label = trts), hjust=1, vjust=2, check_overlap = T, data = dator()) + theme_bw() + theme(legend.position = "none") + 
             geom_hline(yintercept = 1, linetype = "dotted") + geom_vline(xintercept = 1, linetype = "dotted")
