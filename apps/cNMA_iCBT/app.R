@@ -1566,7 +1566,7 @@ var2=structure(c(0.12797, 0.08284, 0.00696, -0.03983, 0.04553, 0.02199,
 ui<-fluidPage(
     #shinyjs::inlineCSS(list(body = "color:DarkBlue")),
     #Applicationtitle
-    titlePanel("Relative treatment effects among psychotherapies"),
+    titlePanel("Relative treatment effects between various iCBT packages and controls (in PHQ-9)"),
     
     #Sidebarwithasliderinputfornumberofbins
     sidebarLayout(
