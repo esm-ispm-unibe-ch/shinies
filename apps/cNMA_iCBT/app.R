@@ -1566,13 +1566,13 @@ var2=structure(c(0.12797, 0.08284, 0.00696, -0.03983, 0.04553, 0.02199,
 ui<-fluidPage(
     #shinyjs::inlineCSS(list(body = "color:DarkBlue")),
     #Applicationtitle
-    titlePanel("Relative treatment effects between various iCBT packages and controls (in PHQ-9)"),
+    titlePanel("Relative treatment effects between various iCBT packages and controls."),
     
     #Sidebarwithasliderinputfornumberofbins
     sidebarLayout(
         sidebarPanel(
             sliderInput("baseline",
-                        "Baseline severity (PHQ9):",
+                        "Baseline severity (PHQ-9):",
                         min=5,
                         max=27,
                         value=15) ,
@@ -1588,8 +1588,8 @@ ui<-fluidPage(
         
             #h4("Combination 1"),
                checkID <- checkboxGroupInput("components1", "Combination A",
-                                            c("wl" = "wl",
-                                              "pl" = "pl",
+                                            c("w" = "w",
+                                              "ns" = "ns",
                                               "pe" = "pe", 
                                               "cr" = "cr",
                                               "ba" = "ba",
@@ -1604,10 +1604,10 @@ ui<-fluidPage(
                                               "ae" = "ae",
                                               "he" = "he",
                                               "tg" = "tg"
-                                              ),inline = T, selected = c("pl","pe","cr","ba")),
+                                              ),inline = T, selected = c("ns","pe","cr","ba")),
             checkID <- checkboxGroupInput("components2", "Combination B",
-                                          c("wl" = "wl",
-                                            "pl" = "pl",
+                                          c("w" = "w",
+                                            "ns" = "ns",
                                             "pe" = "pe", 
                                             "cr" = "cr",
                                             "ba" = "ba",
@@ -1622,12 +1622,13 @@ ui<-fluidPage(
                                             "ae" = "ae",
                                             "he" = "he",
                                             "tg" = "tg"
-                                          ),inline = T, selected = c("wl"))
+                                          ),inline = T, selected = c("w"))
 ),
         
         mainPanel(
             htmlOutput("text0"),htmlOutput("text1"),htmlOutput("text2"),htmlOutput("text3"), htmlOutput("text4"), htmlOutput("text5"), htmlOutput("text6"), htmlOutput("text7"),
-            htmlOutput("text8"), htmlOutput("text9"), htmlOutput("text10"), htmlOutput("text11"), htmlOutput("text12")
+            htmlOutput("text8"), htmlOutput("text9"), htmlOutput("text10"), htmlOutput("text11"), htmlOutput("text12"), 
+            img(src = "img.png", height = 500, width = 500, align="left")
         )
     )
 )
@@ -1647,8 +1648,8 @@ server<-function(input,output){
     comp=""
     n.comp=length(a1)
     for (i in 1:n.comp){comp=paste(comp, a1[i], sep="+")}
-          c1_1=as.numeric(grepl("wl",comp, fixed=T))#wl
-          c1_3=as.numeric(grepl("pl",comp, fixed=T)) #pl
+          c1_1=as.numeric(grepl("w",comp, fixed=T))#w
+          c1_3=as.numeric(grepl("ns",comp, fixed=T)) #ns
           c1_4=as.numeric(grepl("pe",comp, fixed=T)) #pe
           c1_5=as.numeric(grepl("cr",comp, fixed=T)) #cr
           c1_6=as.numeric(grepl("ba",comp, fixed=T))#ba
@@ -1669,8 +1670,8 @@ server<-function(input,output){
           comp2=""
           n.comp2=length(a2)
           for (i in 1:n.comp2){comp2=paste(comp2, a2[i], sep="+")}
-          c2_1=as.numeric(grepl("wl",comp2, fixed=T))#wl
-          c2_3=as.numeric(grepl("pl",comp2, fixed=T)) #pl
+          c2_1=as.numeric(grepl("w",comp2, fixed=T))#w
+          c2_3=as.numeric(grepl("ns",comp2, fixed=T)) #ns
           c2_4=as.numeric(grepl("pe",comp2, fixed=T)) #pe
           c2_5=as.numeric(grepl("cr",comp2, fixed=T)) #cr
           c2_6=as.numeric(grepl("ba",comp2, fixed=T))#ba
@@ -1722,12 +1723,14 @@ server<-function(input,output){
     })
 
     output$text0<-renderText({
-        paste("<b>","<font size = 6>","Primary outcome: relative efficacy in PHQ9")
+        paste("<b>","<font size = 6>","Primary outcome: relative efficacy in PHQ-9")
     })
     
     output$text1<-renderText({
-      HTML(paste0("<font size = 4>","Relative effects for combination A versus combination B: ", M1()[1],", 95% CrI [",M1()[2],"; ",M1()[3],
-                  "]. Effect sizes smaller than zero favor combination A.",sep=""))
+      HTML(paste0("<font size = 4>","Relative effects for combination A versus combination B: ", 
+                  "<b>", "<font color=BLUE>",
+                          M1()[1] ,", 95% CrI [",M1()[2],"; ",M1()[3],
+                  "]","</b>","<font color=BLACK>", ". Effect sizes smaller than zero favor combination A.",sep=""))
          })
     
     output$text2<-renderText({
@@ -1735,8 +1738,10 @@ server<-function(input,output){
     })
     
     output$text3<-renderText({
-        HTML(paste0("<font size = 4>","Odds ratio for dropping out for combination A versus combination B: ", M1()[4],", 95% CrI [",M1()[5],"; ",M1()[6],
-                    "]. Effect sizes smaller than one favor combination A.",sep=""))
+        HTML(paste0("<font size = 4>","Odds ratio for dropping out for combination A versus combination B: ", 
+                    "<b>", "<font color=BLUE>",
+                    M1()[4],", 95% CrI [",M1()[5],"; ",M1()[6],"]","</b>","<font color=BLACK>",
+                    ". Effect sizes smaller than one favor combination A.",sep=""))
     })
     
 }
