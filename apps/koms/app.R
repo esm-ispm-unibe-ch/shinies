@@ -6,8 +6,8 @@ library(ggpubr)
 library(ggplot2)
 
 GraphdataF<-read.csv("Data_for_the_Graph7.csv")
-colnames(GraphdataF)<-c("Treatment","Predicted probability to relapse in 2 years %", "Baseline risk score")
-GraphdataF$`Predicted probability to relapse in 2 years %`<-round(GraphdataF$`Predicted probability to relapse in 2 years %`,1)
+colnames(GraphdataF)<-c("Treatment","Predicted probability to relapse within the next 2 years %", "Baseline risk score")
+GraphdataF$`Predicted probability to relapse within the next 2 years %`<-round(GraphdataF$`Predicted probability to relapse within the next 2 years %`,1)
 GraphdataF$Treatment<-as.character(GraphdataF$Treatment)
 GraphdataF$Treatment[grepl('Glateramere Acetate', GraphdataF$Treatment)] <- 'Glatiramer Acetate'
 GraphdataF$Treatment<-as.factor(GraphdataF$Treatment)
@@ -18,17 +18,17 @@ server <- function(input, output, session) {
   data <- reactive({
     GraphdataF
   })
-  log.risk.score=reactive(-0.8656-0.0181*input$Age - 0.1379*input$SEX  + 0.1683*input$EDSSBL + 0.0587*log(input$ONSYRS+1) - 0.0142*input$RACE
-                          +0.5963*log(input$RLPS1YR+1) - 0.0126 *input$TRELMOS + 0.1901*input$PRMSGR - 0.1718*log(input$T25FWABL+1)
+  log.risk.score=reactive(-0.8656-0.0181*input$Age - 0.1379*SEX()  + 0.1683*input$EDSSBL + 0.0587*log(input$ONSYRS+1) - 0.0142*RACE()
+                          +0.5963*log(input$RLPS1YR+1) - 0.0126 *input$TRELMOS + 0.1901*PRMSGR() - 0.1718*log(input$T25FWABL+1)
                           +0.3022*log(input$NHPTMBL+1)+0.0029*input$PASATABL-0.0010*input$VFT25BL-0.0195*input$SFPCSBL+0.0036*input$SFMCSBL)
   risk.score1 = reactive(exp(log.risk.score())/(1+exp(log.risk.score())))
   risk.score2=reactive(round(risk.score1(),2))
   risk.score=reactive(risk.score2()*100)
   output$plot <- renderPlot({
-    ggplot(data(), aes(x=`Baseline risk score`, y=`Predicted probability to relapse in 2 years %`, group=Treatment)) +
+    ggplot(data(), aes(x=`Baseline risk score`, y=`Predicted probability to relapse within the next 2 years %`, group=Treatment)) +
       geom_line(aes(color=Treatment))+
-      geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk score")+labs( y="Predicted probability to relapse in 2 years %")+
-      theme(text = element_text(size = 17))# theme(axis.text.x = element_text(size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain"),
+      geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk score")+labs( y="Predicted probability to relapse within the next 2 years %")+
+      theme(text = element_text(size = 14))# theme(axis.text.x = element_text(size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain"),
     #      axis.text.y = element_text(size = 15, angle = 0, hjust = 1, vjust = 0, face = "plain"),
     #        axis.title.x = element_text(size = 15, angle = 0, hjust = .5, vjust = 0, face = "plain"),
     #       axis.title.y = element_text(size = 15, angle = 90, hjust = .5, vjust = .5, face = "plain"))
@@ -40,10 +40,10 @@ server <- function(input, output, session) {
   
   table0<- reactive(GraphdataF[which(as.integer(GraphdataF$`Baseline risk score`) == as.integer(risk.score())),])
   table1<- reactive(as.data.frame(table0()$Treatment))
-  table2<- reactive(as.data.frame(round(table0()$`Predicted probability to relapse in 2 years %`,0)))
+  table2<- reactive(as.data.frame(round(table0()$`Predicted probability to relapse within the next 2 years %`,0)))
   table3<- reactive(table0()[,3])
   
-  table4<-reactive(table0()[order(table0()$`Predicted probability to relapse in 2 years %`),])
+  table4<-reactive(table0()[order(table0()$`Predicted probability to relapse within the next 2 years %`),])
   
   output$Predicted.Probabilities <- renderText({
    paste( 
@@ -78,7 +78,32 @@ server <- function(input, output, session) {
    # paste("Your predicted probabilities to relapse in two years under each one of the treatments are:", cbind(as.data.frame(GraphdataF[which(GraphdataF$`Baseline risk score`==38),1]), as.data.frame(GraphdataF[which(GraphdataF$`Baseline risk score`==38),2]))
       #   )
   #})
-    
+   SEX <- reactive({
+     if(input$SEX == "Male") {
+       SEX <- 1
+     } else {
+       SEX <- 0
+     }
+     SEX
+   })
+   
+   RACE <- reactive({
+     if(input$RACE == "White") {
+       RACE <- 1
+     } else {
+       RACE <- 0
+     }
+     RACE
+   })
+   
+   PRMSGR <- reactive({
+     if(input$PRMSGR == "Yes") {
+       PRMSGR <- 1
+     } else {
+       PRMSGR <- 0
+     }
+     PRMSGR
+   })
   output$final.risk.score <- renderText({
     paste("Your baseline risk score is", as.integer(risk.score()))
   })
@@ -90,16 +115,20 @@ server <- function(input, output, session) {
 }
 
 ui <-  fluidPage(theme=shinytheme("readable"),
-                 titlePanel(h1("Prevention of relapses in patients with Relapsing-Remitting Multiple Sclerosis")), # using strong as a direct tag
+                 titlePanel(h1("Predicted probability of experiencing relapse within the next two years")),
+                 titlePanel(h4("Applies to patients with Relapsing-Remitting Multiple Sclerosis")),# using strong as a direct tag
                  #h1("Using textInput and checkboxInput")
                  sidebarLayout(
                    sidebarPanel(
                      sliderInput(inputId = "Age",
                                  label = "Age (years)",
-                                 value = 1, min = 18, max = 60),
-                     checkboxInput(inputId="SEX", label="Male"),
-                     checkboxInput(inputId="RACE", label="White"),
-                     checkboxInput(inputId="PRMSGR", label="Prior treatment"),
+                                 value = 30, min = 18, max = 60),
+                     radioButtons(inputId="SEX", label="Select Gender:",
+                                  choices =list( "Male", "Female")),
+                     radioButtons(inputId="RACE", label="Select Ethnicity:",
+                                  choices =list( "White", "Other")),
+                     radioButtons(inputId="PRMSGR", label="I had a MS treatment before",
+                                  choices =list( "Yes", "No")),
                      sliderInput(inputId="EDSSBL", label="Baseline EDSS",value=1, min=0,max=6,step=0.5),
                      sliderInput(inputId="ONSYRS", label="Years since onset of symptoms",value=1, min=0,max=45),
                      sliderInput(inputId="RLPS1YR", label="Number of relapses the last 1 year",value=1, min=0,max=20),
@@ -112,12 +141,16 @@ ui <-  fluidPage(theme=shinytheme("readable"),
                      numericInput(inputId="SFMCSBL", label="Baseline SF-36 MCS",value=1, min=0,max=80, step=0.001)),
                    
                    mainPanel( h5(textOutput("final.risk.score")),
-                              h4("Plot of predicted probabilities to relapse in two years"),plotOutput("plot"), 
-                              h4("Predicted probabilities to relapse in two years"), textOutput("Predicted.Probabilities"),
-                              h4("Ranking of predicted probabilities to relapse in two years"),
+                              h4("Plot of predicted probabilities to relapse within the next two years"),plotOutput("plot"), 
+                              a("A two-stage prediction model for heterogeneous effects of treatments. Stat Med. 2021", 
+                                href = "https://onlinelibrary.wiley.com/doi/full/10.1002/sim.9034"),
+                                br(),
+                              br(),
+                              h4("Predicted probabilities to relapse within the next two years"), textOutput("Predicted.Probabilities"),
+                              h4("Ranking of predicted probabilities to relapse within the next two years", position="right"),
                               h6("1. The lowest probability to relapse is under treatment:"), textOutput("Ranking.Probabilities1"), #, textOutput("best.treatment")
                               h6("2. Second best choice based on the probability to relapse:"),textOutput("Ranking.Probabilities2"),
-                              h6("3. The treatment that follows is:") ,textOutput("Ranking.Probabilities3"),
+                              h6("3. The treatment that follows is:"),textOutput("Ranking.Probabilities3"),
                               h6("4. The treatment with the highest probability to relapse is:") ,textOutput("Ranking.Probabilities4")
                               )
                  )
