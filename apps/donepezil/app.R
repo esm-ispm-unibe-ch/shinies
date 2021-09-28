@@ -1,4 +1,4 @@
-library(rjags)
+library(coda)
 library(shiny)
 
 result <- list()
@@ -16,19 +16,9 @@ CIBIC_IPDMA_matrix <- as.matrix(samples[,c("d",paste0("gamma[", 1:7,"]"))])
 
 ui <- shinyUI(fluidPage(
   # Application title
-  tags$head(
-    tags$style(HTML("
-
-      /* Change font of header text */
-      h2 {
-        font-size: 400%;
-        font-weight: bold;
-        color: black;
-      }"))
-  ),
+  titlePanel(h1("IPD-MA and prediction analysis of donepezil for Alzheimer's disease", style="color:black; font-size: 400%; font-weight: bold")), 
   
-  titlePanel("Cognitive and global outcomes on donepezil vs placebo for Alzheimer's disease"),            
-             
+  
   # Sidebar with a slider input for number of bins 
   sidebarPanel(
     sliderInput("AGE", label = "Age", min = 60, max = 90, value = 75, step = 1),
@@ -45,19 +35,19 @@ ui <- shinyUI(fluidPage(
   
   
   mainPanel(
-    span(textOutput("text0", inline = TRUE), style="color:black; font-size: 300%; font-weight: bold"),
+    span(textOutput("text0", inline = TRUE), style="color:black; font-size: 400%; font-weight: bold"),
     HTML('<br/>'),
-    span(textOutput("text1", inline = TRUE), style="color:black; font-size: 150%"),
-    span(textOutput("text2", inline = TRUE), style="color:blue; font-size: 150%; font-weight: bold"),
+    span(textOutput("text1", inline = TRUE), style="color:black; font-size: 200%"),
+    span(textOutput("text2", inline = TRUE), style="color:blue; font-size: 200%; font-weight: bold"),
     HTML('<br/>'),
-    span(textOutput("text3", inline = TRUE), style="color:black; font-size: 150%"),
-    span(textOutput("text4", inline = TRUE), style="color:blue; font-size: 150%; font-weight: bold"),
+    span(textOutput("text3", inline = TRUE), style="color:black; font-size: 200%"),
+    span(textOutput("text4", inline = TRUE), style="color:blue; font-size: 200%; font-weight: bold"),
     HTML('<br/>'),
     HTML('<br/>'),
-    span(textOutput("text5", inline = TRUE), style="color:black; font-size: 300%; font-weight: bold"),
+    span(textOutput("text5", inline = TRUE), style="color:black; font-size: 400%; font-weight: bold"),
     HTML('<br/>'),
-    span(textOutput("text6", inline = TRUE), style="color:black; font-size: 150%"),
-    span(textOutput("text7", inline = TRUE), style="color:blue; font-size: 150%; font-weight: bold")
+    span(textOutput("text6", inline = TRUE), style="color:black; font-size: 200%"),
+    span(textOutput("text7", inline = TRUE), style="color:blue; font-size: 200%; font-weight: bold")
   )      
   ))
   
@@ -89,7 +79,7 @@ server <- shinyServer(function(input, output) {
   })
    
   output$text0<- renderText({
-    "ADAS-cog total score after 24 weeks [cognitive outcome]"
+    "ADAS-cog total score after 24 weeks"
   })
   
   output$text1 <- renderText({
@@ -111,7 +101,7 @@ server <- shinyServer(function(input, output) {
   })
   
   output$text5 <- renderText({
-    "CIBIC-Plus score after 24 weeks [global outcome]"
+    "CIBIC-Plus score after 24 weeks "
   })
     
   output$text6 <- renderText({
@@ -123,7 +113,6 @@ server <- shinyServer(function(input, output) {
     paste0(round(data$CIBIC_IPDMA_mean, digits = 1), ", 95% CrI [", round(data$CIBIC_IPDMA_CrI[1], digits = 1), "; ", round(data$CIBIC_IPDMA_CrI[2], digits = 1),"]")
   })
 })
-
 
 # Create Shiny object
 shinyApp(ui = ui, server = server)
