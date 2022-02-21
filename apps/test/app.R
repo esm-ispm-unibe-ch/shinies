@@ -5,7 +5,7 @@ library(shinythemes)
 library(gridExtra)
 library(ggpubr)
 library(ggplot2)
-library(tidyverse)
+
 
 #write.xlsx(GraphdataL,"Data for the Graph_IPDAD.xls",row.names = F)
 #GraphdataF<-read_excel("C:/Users/kc19o338/Documents/GitHub/Reproduce-results-from-papers/ThreeStageModelRRMS/Results/Data for the Graph_IPDAD.xls")
@@ -16,7 +16,7 @@ library(tidyverse)
 #colnames(Graphdata)<-c("Treatment", "Predicted probability to relapse within the next 2 years %", "Baseline risk score")
 #write.csv(Graphdata,"Data for the Graph_IPDAD.csv",row.names = F
 
-GraphdataF<-read_csv("Data for the Graph_IPDAD.csv")
+GraphdataF<-read.csv("Data for the Graph_IPDAD.csv")
 colnames(GraphdataF)<-c("Treatment","Predicted probability to relapse within the next 2 years %", "Baseline risk score")
 #GraphdataF$`Predicted probability to relapse within the next 2 years %`<-round(GraphdataF$`Predicted probability to relapse within the next 2 years %`,1)
 GraphdataF$Treatment<-as.character(GraphdataF$Treatment)

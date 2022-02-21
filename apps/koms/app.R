@@ -4,9 +4,9 @@ library(shinythemes)
 library(gridExtra)
 library(ggpubr)
 library(ggplot2)
-library(tidyverse)
 
-GraphdataF<-read_csv("Data_for_the_Graph7.csv")
+
+GraphdataF<-read.csv("Data_for_the_Graph7.csv")
 colnames(GraphdataF)<-c("Treatment","Predicted probability to relapse within the next 2 years %", "Baseline risk score")
 GraphdataF$`Predicted probability to relapse within the next 2 years %`<-round(GraphdataF$`Predicted probability to relapse within the next 2 years %`,1)
 GraphdataF$Treatment<-as.character(GraphdataF$Treatment)
