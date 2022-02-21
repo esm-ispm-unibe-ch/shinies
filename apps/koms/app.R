@@ -4,8 +4,9 @@ library(shinythemes)
 library(gridExtra)
 library(ggpubr)
 library(ggplot2)
+library(tidyverse)
 
-GraphdataF<-read.csv("Data_for_the_Graph7.csv")
+GraphdataF<-read_csv("Data_for_the_Graph7.csv")
 colnames(GraphdataF)<-c("Treatment","Predicted probability to relapse within the next 2 years %", "Baseline risk score")
 GraphdataF$`Predicted probability to relapse within the next 2 years %`<-round(GraphdataF$`Predicted probability to relapse within the next 2 years %`,1)
 GraphdataF$Treatment<-as.character(GraphdataF$Treatment)
@@ -14,7 +15,7 @@ GraphdataF$Treatment<-as.factor(GraphdataF$Treatment)
 
 #GraphdataF$Treatment[which(GraphdataF$Treatment=="Glateramere Acetate")]<-c("Glatiramer Acetate")
 server <- function(input, output, session) {
-  
+
   data <- reactive({
     GraphdataF
   })
@@ -32,48 +33,48 @@ server <- function(input, output, session) {
     #      axis.text.y = element_text(size = 15, angle = 0, hjust = 1, vjust = 0, face = "plain"),
     #        axis.title.x = element_text(size = 15, angle = 0, hjust = .5, vjust = 0, face = "plain"),
     #       axis.title.y = element_text(size = 15, angle = 90, hjust = .5, vjust = .5, face = "plain"))
-    
+
     # +xlab("Baseline risk score")+ylab("Predicted probability to relapse in 2 years")
-    
-    
+
+
   })
-  
+
   table0<- reactive(GraphdataF[which(as.integer(GraphdataF$`Baseline risk score`) == as.integer(risk.score())),])
   table1<- reactive(as.data.frame(table0()$Treatment))
   table2<- reactive(as.data.frame(round(table0()$`Predicted probability to relapse within the next 2 years %`,0)))
   table3<- reactive(table0()[,3])
-  
+
   table4<-reactive(table0()[order(table0()$`Predicted probability to relapse within the next 2 years %`),])
-  
+
   output$Predicted.Probabilities <- renderText({
-   paste( 
-         table1()[1,1], "-", table2()[1,1], "% / ", 
+   paste(
+         table1()[1,1], "-", table2()[1,1], "% / ",
          table1()[2,1], "-", table2()[2,1], "% /",
          table1()[3,1], "-", table2()[3,1], "% / ",
          table1()[4,1], "-", table2()[4,1], "% ")
     })
-   
+
    output$Ranking.Probabilities1 <- renderText({
      paste(table4()[1,1], "with", table4()[1,2], "% probability to relapse." )
-           
+
      })
    output$Ranking.Probabilities2 <- renderText({
      paste(table4()[2,1], "with ", table4()[2,2], "% probability to relapse.")
-     
+
    }
   )
    output$Ranking.Probabilities3 <- renderText({
      paste(table4()[3,1], "with", table4()[3,2], "% probability to relapse.")
-     
+
    }
    )
-   
+
    output$Ranking.Probabilities4 <- renderText({
      paste(table4()[4,1], "with", table4()[4,2], "% probability to relapse")
-     
+
    }
    )
-   
+
   #output$Predicted.Probabilities <- renderText({
    # paste("Your predicted probabilities to relapse in two years under each one of the treatments are:", cbind(as.data.frame(GraphdataF[which(GraphdataF$`Baseline risk score`==38),1]), as.data.frame(GraphdataF[which(GraphdataF$`Baseline risk score`==38),2]))
       #   )
@@ -86,7 +87,7 @@ server <- function(input, output, session) {
      }
      SEX
    })
-   
+
    RACE <- reactive({
      if(input$RACE == "White") {
        RACE <- 1
@@ -95,7 +96,7 @@ server <- function(input, output, session) {
      }
      RACE
    })
-   
+
    PRMSGR <- reactive({
      if(input$PRMSGR == "Yes") {
        PRMSGR <- 1
@@ -107,8 +108,8 @@ server <- function(input, output, session) {
   output$final.risk.score <- renderText({
     paste("Your baseline risk score is", as.integer(risk.score()))
   })
-  
-  
+
+
   #output$best.treatment<- renderText({
   #paste("The optimal treatment is", table[order(table[,2]),3])
   #})
@@ -139,10 +140,10 @@ ui <-  fluidPage(theme=shinytheme("readable"),
                      numericInput(inputId="NHPTMBL", label="Baseline 9 Hole Peg Test",value=1, min=0,max=300, step=0.1),
                      numericInput(inputId="SFPCSBL", label="Baseline SF-36 PCS",value=1, min=0,max=80, step=0.01),
                      numericInput(inputId="SFMCSBL", label="Baseline SF-36 MCS",value=1, min=0,max=80, step=0.001)),
-                   
+
                    mainPanel( h5(textOutput("final.risk.score")),
-                              h4("Plot of predicted probabilities to relapse within the next two years"),plotOutput("plot"), 
-                              a("A two-stage prediction model for heterogeneous effects of treatments. Stat Med. 2021", 
+                              h4("Plot of predicted probabilities to relapse within the next two years"),plotOutput("plot"),
+                              a("A two-stage prediction model for heterogeneous effects of treatments. Stat Med. 2021",
                                 href = "https://onlinelibrary.wiley.com/doi/full/10.1002/sim.9034"),
                                 br(),
                               br(),
