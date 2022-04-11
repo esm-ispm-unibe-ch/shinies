@@ -52,12 +52,11 @@ server <- function(input, output, session) {
   risk.score3=reactive(risk.score()*100)
   output$plot <- renderPlot({
     ggplot(data(), aes(x=`Baseline risk`, y=`Predicted probability of relapsing within the next two years %`, group=Treatment)) +
-      geom_line(data=data(),mapping=aes(color=Treatment))+geom_vline(xintercept=0.1265625, linetype="dashed", color = "red")+
+      geom_line(aes(color=Treatment))+geom_vline(xintercept=0.1265625, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.7040377, linetype="dashed", color = "red")+
-      geom_point(data=data(),mapping=aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
+      geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
       geom_ribbon(aes(xmin=0, xmax=0.1265625), alpha=0.10, fill="grey70")+  geom_ribbon(aes(xmin=0.7040377, xmax=1), alpha=0.10, fill="grey70")+
-      theme_minimal()
-     # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
+      theme_minimal()    # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                      colour = "lightblue",
        #                                                                     size = 0.5, linetype = "solid"),
         #   panel.grid.major = element_line(size = 0.8, linetype = 'solid',
@@ -88,14 +87,15 @@ server <- function(input, output, session) {
       geom_vline(xintercept=0.66126, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score_SMSC(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
       geom_ribbon(aes(xmin=0, xmax=0.03925), alpha=0.10, fill="grey70")+  geom_ribbon(aes(xmin=0.66126, xmax=1), alpha=0.10, fill="grey70")+
-      theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
-                                                                             colour = "lightblue",
-                                                                             size = 0.5, linetype = "solid"),
-             panel.grid.major = element_line(size = 0.8, linetype = 'solid',
-                                             colour = "white"),
-             panel.grid.minor = element_line(size = 0.8, linetype = 'solid',
-                                             colour = "white")
-      )# theme(axis.text.x = element_text(size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain"),
+      theme_minimal()
+      # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
+      #                                                                       colour = "lightblue",
+       #                                                                      size = 0.5, linetype = "solid"),
+        #     panel.grid.major = element_line(size = 0.8, linetype = 'solid',
+         #                                    colour = "white"),
+          #   panel.grid.minor = element_line(size = 0.8, linetype = 'solid',
+           #                                  colour = "white")
+      #)# theme(axis.text.x = element_text(size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain"),
     #      axis.text.y = element_text(size = 15, angle = 0, hjust = 1, vjust = 0, face = "plain"),
     #        axis.title.x = element_text(size = 15, angle = 0, hjust = .5, vjust = 0, face = "plain"),
     #       axis.title.y = element_text(size = 15, angle = 90, hjust = .5, vjust = .5, face = "plain"))
