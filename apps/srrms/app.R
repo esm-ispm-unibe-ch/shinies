@@ -55,7 +55,7 @@ server <- function(input, output, session) {
       geom_line(aes(color=Treatment))+geom_vline(xintercept=0.1265625, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.7040377, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
-      geom_ribbon(aes(xmin=0, xmax=0.1265625), alpha=0.10, fill="grey70")+  geom_ribbon(aes(xmin=0.7040377, xmax=1), alpha=0.10, fill="grey70")+
+      #geom_ribbon(aes(xmin=0, xmax=0.1265625, ymin=0, ymax=1), alpha=0.10, fill="grey70")+  geom_ribbon(aes(xmin=0.7040377, xmax=1, ymin=0, ymax=1), alpha=0.10, fill="grey70")+
       theme_minimal()    # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                      colour = "lightblue",
        #                                                                     size = 0.5, linetype = "solid"),
@@ -86,7 +86,7 @@ server <- function(input, output, session) {
       geom_line(aes(color=Treatment))+geom_vline(xintercept=0.03925, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.66126, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score_SMSC(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
-      geom_ribbon(aes(xmin=0, xmax=0.03925), alpha=0.10, fill="grey70")+  geom_ribbon(aes(xmin=0.66126, xmax=1), alpha=0.10, fill="grey70")+
+     # geom_ribbon(aes(xmin=0, xmax=0.03925, ymin=0, ymax=1), alpha=0.10, fill="grey70")+  geom_ribbon(aes(xmin=0.66126, xmax=1, ymin=0, ymax=1), alpha=0.10, fill="grey70")+
       theme_minimal()
       # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                       colour = "lightblue",
