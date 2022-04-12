@@ -42,7 +42,11 @@ server <- function(input, output, session) {
   data_SMSC <- reactive({
     Graphdata_SMSC
   })
-
+  df_x <- reactive({tibble(
+    x = c(1, 2),
+    ymax = c(0.5, 0.8),
+    ymin = c(0.4, 0.3)
+  ) })
   log.risk.score=reactive(-1.137-0.025*(input$Age-37.04233)+0.237*(log(input$DiseaseDuration+10)-2.824242)+0.265*(input$Edss-2.390698)+0.217*GdLesions()+NrRelapses()-0.335*(log(input$MonthsSinceLastRelapse+10)-2.774328)-0.244*TrNaive()+0.178*Gender())
   risk.score1 = reactive(exp(log.risk.score())/(1+exp(log.risk.score())))
   risk.score2=reactive(round(risk.score1(),2))
@@ -53,7 +57,7 @@ server <- function(input, output, session) {
       geom_line(aes(color=Treatment))+geom_vline(xintercept=0.1265625, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.7040377, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
-      #geom_ribbon(aes(xmin=0, xmax=0.1265625), alpha=0.10, fill="grey70")+  geom_ribbon(aes(xmin=0.7040377, xmax=1), alpha=0.10, fill="grey70")+
+      geom_rect(aes(xmin=0, xmax=0.1265625, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.7040377, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
       theme_minimal()    # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                      colour = "lightblue",
        #                                                                     size = 0.5, linetype = "solid"),
@@ -84,7 +88,7 @@ server <- function(input, output, session) {
       geom_line(aes(color=Treatment))+geom_vline(xintercept=0.03925, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.66126, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score_SMSC(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
-      #geom_ribbon(aes(xmin=0, xmax=0.03925), alpha=0.10, fill="grey70")+  geom_ribbon(aes(xmin=0.66126, xmax=1), alpha=0.10, fill="grey70")+
+      geom_rect(aes(xmin=0, xmax=0.03925, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.66126, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
       theme_minimal()
       # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                       colour = "lightblue",
