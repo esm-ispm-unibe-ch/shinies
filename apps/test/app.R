@@ -5,7 +5,6 @@ library(gridExtra)
 library(ggpubr)
 library(ggplot2)
 
-
 #write.xlsx(GraphdataL,"Data for the Graph_IPDAD.xls",row.names = F)
 #GraphdataF<-read_excel("C:/Users/kc19o338/Documents/GitHub/Reproduce-results-from-papers/ThreeStageModelRRMS/Results/Data for the Graph_IPDAD.xls")
 #Graphdata1<-GraphdataF[,3]
@@ -57,7 +56,7 @@ server <- function(input, output, session) {
       geom_line(aes(color=Treatment))+geom_vline(xintercept=0.1265625, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.7040377, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
-      geom_rect(aes(xmin=0, xmax=0.1265625, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.7040377, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
+      #geom_rect(aes(xmin=0, xmax=0.1265625, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.7040377, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
       theme_minimal()    # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                      colour = "lightblue",
        #                                                                     size = 0.5, linetype = "solid"),
@@ -88,7 +87,7 @@ server <- function(input, output, session) {
       geom_line(aes(color=Treatment))+geom_vline(xintercept=0.03925, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.66126, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score_SMSC(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
-      geom_rect(aes(xmin=0, xmax=0.03925, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.66126, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
+      #geom_rect(aes(xmin=0, xmax=0.03925, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.66126, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
       theme_minimal()
       # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                       colour = "lightblue",
