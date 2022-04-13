@@ -56,7 +56,6 @@ server <- function(input, output, session) {
       geom_line(aes(color=Treatment))+geom_vline(xintercept=0.1265625, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.7040377, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
-      #geom_rect(aes(xmin=0, xmax=0.1265625, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.7040377, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
       theme_minimal()    # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                      colour = "lightblue",
        #                                                                     size = 0.5, linetype = "solid"),
@@ -72,6 +71,7 @@ server <- function(input, output, session) {
     #       axis.title.y = element_text(size = 15, angle = 90, hjust = .5, vjust = .5, face = "plain"))
 
     # +xlab("Baseline risk score")+ylab("Predicted probability to relapse in 2 years")
+    #geom_rect(aes(xmin=0, xmax=0.1265625, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.7040377, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
 
 
   })
@@ -87,7 +87,6 @@ server <- function(input, output, session) {
       geom_line(aes(color=Treatment))+geom_vline(xintercept=0.03925, linetype="dashed", color = "red")+
       geom_vline(xintercept=0.66126, linetype="dashed", color = "red")+
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score_SMSC(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
-      #geom_rect(aes(xmin=0, xmax=0.03925, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.66126, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
       theme_minimal()
       # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
       #                                                                       colour = "lightblue",
@@ -102,6 +101,7 @@ server <- function(input, output, session) {
     #       axis.title.y = element_text(size = 15, angle = 90, hjust = .5, vjust = .5, face = "plain"))
 
     # +xlab("Baseline risk score")+ylab("Predicted probability to relapse in 2 years")
+    #geom_rect(aes(xmin=0, xmax=0.03925, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.66126, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
 
 
   })
