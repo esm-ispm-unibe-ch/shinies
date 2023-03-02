@@ -135,8 +135,8 @@ ui <-  fluidPage(theme=shinytheme("readable"),
                    mainPanel(  span(h3(textOutput("final.risk.score")),style="color:blue"),
                                plotOutput("plot"),
                                span(h3(textOutput("final.text")),style="color:green"),
-                               a("Development, validation and clinical usefulness of a prognostic model for relapse in relapsing-remitting multiple sclerosis. Diagn Progn Res. 2021",
-                                 href = "https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-021-00106-6"),
+                               a("Development, validation and clinical usefulness of a prognostic model for relapse in relapsing-remitting multiple sclerosis. Diagn Progn Res. 2021"),
+                                 #href = "https://diagnprognres.biomedcentral.com/articles/10.1186/s41512-021-00106-6"),
                                br(),
                                br()
                    )
