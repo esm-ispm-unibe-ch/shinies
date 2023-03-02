@@ -18,15 +18,15 @@ GraphdataF<-read.csv("Data for the Graph_IPDAD.csv")
 colnames(GraphdataF)<-c("Treatment","Predicted probability of relapsing within the next two years %", "Baseline risk")
 #GraphdataF$`Predicted probability to relapse within the next 2 years %`<-round(GraphdataF$`Predicted probability to relapse within the next 2 years %`,1)
 GraphdataF$Treatment<-as.character(GraphdataF$Treatment)
-GraphdataF$Treatment[grepl('Glateramere Acetate', GraphdataF$Treatment)] <- 'Glatiramer Acetate'
+#GraphdataF$Treatment[grepl('Glateramere Acetate', GraphdataF$Treatment)] <- 'Glatiramer Acetate'
 GraphdataF$Treatment<-as.factor(GraphdataF$Treatment)
 
 
 Graphdata_SMSC<-read.csv("GraphData_SMSC.csv")
-Graphdata_SMSC<-Graphdata_SMSC[,c(2,3,4)]
-colnames(Graphdata_SMSC)<-c("Baseline risk","Predicted probability of relapsing within the next two years %","Treatment" )
-Graphdata_SMSC<-Graphdata_SMSC[,c(3,2,1)]
-Graphdata_SMSC$Treatment[grepl('Placebo', Graphdata_SMSC$Treatment)] <- 'untreated'
+#Graphdata_SMSC<-Graphdata_SMSC[,c(2,3,4)]
+colnames(Graphdata_SMSC)<-c("Treatment","Predicted probability of relapsing within the next two years %", "Baseline risk")
+#Graphdata_SMSC<-Graphdata_SMSC[,c(3,2,1)]
+#Graphdata_SMSC$Treatment[grepl('Placebo', Graphdata_SMSC$Treatment)] <- 'untreated'
 Graphdata_SMSC$Treatment<-as.factor(Graphdata_SMSC$Treatment)
 
 
@@ -58,15 +58,15 @@ server <- function(input, output, session) {
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
       geom_rect(aes(xmin=0, xmax=0.1265625, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.7040377, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
       theme_minimal()    # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
-      #                                                                      colour = "lightblue",
-       #                                                                     size = 0.5, linetype = "solid"),
-        #   panel.grid.major = element_line(size = 0.8, linetype = 'solid',
-         #                                    colour = "white"),
-          #   panel.grid.minor = element_line(size = 0.8, linetype = 'solid',
-           #                                colour = "white"))#+
-      #+
+    #                                                                      colour = "lightblue",
+    #                                                                     size = 0.5, linetype = "solid"),
+    #   panel.grid.major = element_line(size = 0.8, linetype = 'solid',
+    #                                    colour = "white"),
+    #   panel.grid.minor = element_line(size = 0.8, linetype = 'solid',
+    #                                colour = "white"))#+
+    #+
     # geom_rect(data=data_background(), mapping=aes(xmin = xstart, xmax = xend, ymin = -Inf, ymax = Inf, fill = col), alpha = 0.4)
-      # theme(axis.text.x = element_text(size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain"),
+    # theme(axis.text.x = element_text(size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain"),
     #      axis.text.y = element_text(size = 15, angle = 0, hjust = 1, vjust = 0, face = "plain"),
     #        axis.title.x = element_text(size = 15, angle = 0, hjust = .5, vjust = 0, face = "plain"),
     #       axis.title.y = element_text(size = 15, angle = 90, hjust = .5, vjust = .5, face = "plain"))
@@ -90,14 +90,14 @@ server <- function(input, output, session) {
       geom_point(aes(color=Treatment))+geom_vline(xintercept=risk.score_SMSC(), color="blue")+labs( x="Baseline risk")+labs( y="Probability of relapsing within the next two years")+
       geom_rect(aes(xmin=0, xmax=0.03925, ymin=-Inf,ymax=Inf), alpha=0.01, fill="grey")+  geom_rect(aes(xmin=0.66126, xmax=1, ymin=-Inf, ymax=Inf), alpha=0.01, fill="grey")+
       theme_minimal()
-      # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
-      #                                                                       colour = "lightblue",
-       #                                                                      size = 0.5, linetype = "solid"),
-        #     panel.grid.major = element_line(size = 0.8, linetype = 'solid',
-         #                                    colour = "white"),
-          #   panel.grid.minor = element_line(size = 0.8, linetype = 'solid',
-           #                                  colour = "white")
-      #)# theme(axis.text.x = element_text(size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain"),
+    # theme( text = element_text(size = 16), panel.background = element_rect(fill = "white",
+    #                                                                       colour = "lightblue",
+    #                                                                      size = 0.5, linetype = "solid"),
+    #     panel.grid.major = element_line(size = 0.8, linetype = 'solid',
+    #                                    colour = "white"),
+    #   panel.grid.minor = element_line(size = 0.8, linetype = 'solid',
+    #                                  colour = "white")
+    #)# theme(axis.text.x = element_text(size = 20, angle = 90, hjust = .5, vjust = .5, face = "plain"),
     #      axis.text.y = element_text(size = 15, angle = 0, hjust = 1, vjust = 0, face = "plain"),
     #        axis.title.x = element_text(size = 15, angle = 0, hjust = .5, vjust = 0, face = "plain"),
     #       axis.title.y = element_text(size = 15, angle = 90, hjust = .5, vjust = .5, face = "plain"))
@@ -145,7 +145,7 @@ server <- function(input, output, session) {
     NrRelapses
   })
 
-   Gender_SMSC <- reactive({
+  Gender_SMSC <- reactive({
     if(input$Gender_SMSC == "Female") {
       Gender_SMSC <- 1
     } else {
@@ -258,7 +258,7 @@ server <- function(input, output, session) {
     else if (risk.score()>0.3615 & risk.score()<=0.4278) {"You are in the 3rd quantile out of the four risk groups."}
     else if (risk.score()>0.4278) {"You are in the highest quantile out of the four risk groups."}
 
-    })
+  })
   output$final.risk.score <- renderText({
     paste("Your baseline risk is", risk.score()*100,"%")
   })
@@ -275,7 +275,7 @@ server <- function(input, output, session) {
     paste("Your baseline risk is", risk.score_SMSC()*100,"%")
   })
 
-  output$message <- renderText({"Multiple data sources were used for the presented estimations: aggregate data, individual participant data, and placebo arms from randomized clinical trials, as well as individual participant data from an observational study"})
+  output$message <- renderText({"Multiple data sources were used for the presented estimations: aggregate data, individual participant data from randomized clinical trials, as well as individual participant data from an observational study"})
   #output$best.treatment<- renderText({
   #paste("The optimal treatment is", table[order(table[,2]),3])
   #})
@@ -318,9 +318,9 @@ ui <- navbarPage("Probability of relapsing in patients with relapsing-remitting 
                                 tags$tab(), h5(textOutput("Ranking.Probabilities1"),style = "font-size:17px;"), #, textOutput("best.treatment")
                                 h5(textOutput("Ranking.Probabilities2"),style = "font-size:17px;"),
                                 h5(textOutput("Ranking.Probabilities3"),style = "font-size:17px;"),
-                                tags$hr(),tags$i("Multiple data sources were used for the presented estimations: aggregate data from randimized clinical trials (RCTs) (1),(2), individual participant data from RCTs (3),(4),(5), and placebo arms from RCTs (6), as well as individual participant data from an observational study (7)",style = "font-size:10px;"),
+                                tags$hr(),tags$i("Multiple data sources were used for the presented estimations: aggregate data from randimized clinical trials (RCTs) (1),(2), individual participant data from RCTs (3),(4),(5), as well as individual participant data from an observational study (6)",style = "font-size:10px;"),
                                 tags$tab(),a("1. Johnson study",
-                                  href = "https://pubmed.ncbi.nlm.nih.gov/7617181/",style = "font-size:8px;"),
+                                             href = "https://pubmed.ncbi.nlm.nih.gov/7617181/",style = "font-size:8px;"),
                                 a("2. Bornstein study",
                                   href = "https://pubmed.ncbi.nlm.nih.gov/3302705/",style = "font-size:8px;"),
                                 a("3. AFFIRM study",
@@ -329,9 +329,7 @@ ui <- navbarPage("Probability of relapsing in patients with relapsing-remitting 
                                   href = "https://pubmed.ncbi.nlm.nih.gov/22992072/",style = "font-size:8px;"),
                                 a("5. DEFINE study",
                                   href = "https://pubmed.ncbi.nlm.nih.gov/22992073/",style = "font-size:8px;"),
-                                a("6. Critical Path Institute studies",
-                                  href = "https://c-path.org/",style = "font-size:8px;"),
-                                a("7. Swiss Multiple Sclerosis Cohort",
+                                a("6. Swiss Multiple Sclerosis Cohort",
                                   href = "https://pubmed.ncbi.nlm.nih.gov/27032105/",style = "font-size:8px;")
 
 
@@ -373,24 +371,24 @@ ui <- navbarPage("Probability of relapsing in patients with relapsing-remitting 
 
                      # Show a plot of the generated distribution
                      mainPanel(h5(textOutput("baseline.risk_SMSC")),plotOutput("plot_SMSC"),
-                      tags$i("Between the two red vertical dashed lines are the baseline risk values observed in the observational study. The results in the grey areas are not estimated from the data (extrapolation).",style = "font-size:10px;"),
-                      br(),tags$b("Predictions",style = "font-size:20px;"),br(), h5(textOutput("Untreated"),style = "font-size:17px;"),
-                      tags$tab(),h5(textOutput("Ranking.Probabilities1_SMSC"),style = "font-size:17px;"), #, textOutput("best.treatment")
-                      h5(textOutput("Ranking.Probabilities2_SMSC"),style = "font-size:17px;"),
-                      h5(textOutput("Ranking.Probabilities3_SMSC"),style = "font-size:17px;"),
-                      tags$hr(),tags$i("Multiple data sources were used for the presented estimations: aggregate data from randimized clinical trials (RCTs) (1),(2), individual participant data from RCTs (3),(4),(5), as well as individual participant data from an observational study (6)",style = "font-size:10px;"),
-                      tags$tab(),a("1. Johnson study",
-                                   href = "https://pubmed.ncbi.nlm.nih.gov/7617181/",style = "font-size:8px;"),
-                      a("2. Bornstein study",
-                        href = "https://pubmed.ncbi.nlm.nih.gov/3302705/",style = "font-size:8px;"),
-                      a("3. AFFIRM study",
-                        href = "https://pubmed.ncbi.nlm.nih.gov/16510744/",style = "font-size:8px;"),
-                      a("4. CONFIRM study",
-                        href = "https://pubmed.ncbi.nlm.nih.gov/22992072/",style = "font-size:8px;"),
-                      a("5. DEFINE study",
-                        href = "https://pubmed.ncbi.nlm.nih.gov/22992073/",style = "font-size:8px;"),
-                      a("6. Swiss Multiple Sclerosis Cohort",
-                        href = "https://pubmed.ncbi.nlm.nih.gov/27032105/",style = "font-size:8px;")
+                               tags$i("Between the two red vertical dashed lines are the baseline risk values observed in the observational study. The results in the grey areas are not estimated from the data (extrapolation).",style = "font-size:10px;"),
+                               br(),tags$b("Predictions",style = "font-size:20px;"),br(), h5(textOutput("Untreated"),style = "font-size:17px;"),
+                               tags$tab(),h5(textOutput("Ranking.Probabilities1_SMSC"),style = "font-size:17px;"), #, textOutput("best.treatment")
+                               h5(textOutput("Ranking.Probabilities2_SMSC"),style = "font-size:17px;"),
+                               h5(textOutput("Ranking.Probabilities3_SMSC"),style = "font-size:17px;"),
+                               tags$hr(),tags$i("Multiple data sources were used for the presented estimations: aggregate data from randimized clinical trials (RCTs) (1),(2), individual participant data from RCTs (3),(4),(5), as well as individual participant data from an observational study (6)",style = "font-size:10px;"),
+                               tags$tab(),a("1. Johnson study",
+                                            href = "https://pubmed.ncbi.nlm.nih.gov/7617181/",style = "font-size:8px;"),
+                               a("2. Bornstein study",
+                                 href = "https://pubmed.ncbi.nlm.nih.gov/3302705/",style = "font-size:8px;"),
+                               a("3. AFFIRM study",
+                                 href = "https://pubmed.ncbi.nlm.nih.gov/16510744/",style = "font-size:8px;"),
+                               a("4. CONFIRM study",
+                                 href = "https://pubmed.ncbi.nlm.nih.gov/22992072/",style = "font-size:8px;"),
+                               a("5. DEFINE study",
+                                 href = "https://pubmed.ncbi.nlm.nih.gov/22992073/",style = "font-size:8px;"),
+                               a("6. Swiss Multiple Sclerosis Cohort",
+                                 href = "https://pubmed.ncbi.nlm.nih.gov/27032105/",style = "font-size:8px;")
 
 
                      )
