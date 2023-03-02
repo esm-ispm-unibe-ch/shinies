@@ -1,397 +1,397 @@
-"","Baseline risk","Predicted probability of relapsing within the next two years %","Treatment"
-"logitp2[1,1]",0.01,0.00122985858793334,"Dimethyl Fumarate"
-"logitp2[2,1]",0.02,0.00240780393988341,"Dimethyl Fumarate"
-"logitp2[3,1]",0.03,0.00357994903805218,"Dimethyl Fumarate"
-"logitp2[4,1]",0.04,0.0047558268051422,"Dimethyl Fumarate"
-"logitp2[5,1]",0.05,0.00594011701141541,"Dimethyl Fumarate"
-"logitp2[6,1]",0.06,0.00713574903016799,"Dimethyl Fumarate"
-"logitp2[7,1]",0.07,0.00834482722452277,"Dimethyl Fumarate"
-"logitp2[8,1]",0.08,0.00956900797913771,"Dimethyl Fumarate"
-"logitp2[9,1]",0.09,0.0108096828564039,"Dimethyl Fumarate"
-"logitp2[10,1]",0.1,0.0120680786114568,"Dimethyl Fumarate"
-"logitp2[11,1]",0.11,0.0133453166745352,"Dimethyl Fumarate"
-"logitp2[12,1]",0.12,0.0146424509635505,"Dimethyl Fumarate"
-"logitp2[13,1]",0.13,0.0159604932765248,"Dimethyl Fumarate"
-"logitp2[14,1]",0.14,0.0173004311700977,"Dimethyl Fumarate"
-"logitp2[15,1]",0.15,0.0186632410945483,"Dimethyl Fumarate"
-"logitp2[16,1]",0.16,0.0200498984322856,"Dimethyl Fumarate"
-"logitp2[17,1]",0.17,0.0214613854622452,"Dimethyl Fumarate"
-"logitp2[18,1]",0.18,0.0228986979091617,"Dimethyl Fumarate"
-"logitp2[19,1]",0.19,0.0243628505167988,"Dimethyl Fumarate"
-"logitp2[20,1]",0.2,0.0258548819467407,"Dimethyl Fumarate"
-"logitp2[21,1]",0.21,0.0273758592159534,"Dimethyl Fumarate"
-"logitp2[22,1]",0.22,0.028926881828135,"Dimethyl Fumarate"
-"logitp2[23,1]",0.23,0.0305090857148126,"Dimethyl Fumarate"
-"logitp2[24,1]",0.24,0.0321236470755244,"Dimethyl Fumarate"
-"logitp2[25,1]",0.25,0.0337717861881043,"Dimethyl Fumarate"
-"logitp2[26,1]",0.26,0.0354547712474168,"Dimethyl Fumarate"
-"logitp2[27,1]",0.27,0.0371739222821797,"Dimethyl Fumarate"
-"logitp2[28,1]",0.28,0.0389306151936223,"Dimethyl Fumarate"
-"logitp2[29,1]",0.29,0.0407262859559194,"Dimethyl Fumarate"
-"logitp2[30,1]",0.3,0.0425624350160913,"Dimethyl Fumarate"
-"logitp2[31,1]",0.31,0.0444406319300478,"Dimethyl Fumarate"
-"logitp2[32,1]",0.32,0.0463625202714177,"Dimethyl Fumarate"
-"logitp2[33,1]",0.33,0.0483298228506226,"Dimethyl Fumarate"
-"logitp2[34,1]",0.34,0.0503443472831984,"Dimethyl Fumarate"
-"logitp2[35,1]",0.35,0.0524079919486048,"Dimethyl Fumarate"
-"logitp2[36,1]",0.36,0.0545227523836596,"Dimethyl Fumarate"
-"logitp2[37,1]",0.37,0.0566907281582915,"Dimethyl Fumarate"
-"logitp2[38,1]",0.38,0.058914130285552,"Dimethyl Fumarate"
-"logitp2[39,1]",0.39,0.0611952892228072,"Dimethyl Fumarate"
-"logitp2[40,1]",0.4,0.063536663526805,"Dimethyl Fumarate"
-"logitp2[41,1]",0.41,0.0659408492319691,"Dimethyl Fumarate"
-"logitp2[42,1]",0.42,0.0684105900289122,"Dimethyl Fumarate"
-"logitp2[43,1]",0.43,0.0709487883289127,"Dimethyl Fumarate"
-"logitp2[44,1]",0.44,0.0735585173101177,"Dimethyl Fumarate"
-"logitp2[45,1]",0.45,0.0762430340526971,"Dimethyl Fumarate"
-"logitp2[46,1]",0.46,0.079005793883301,"Dimethyl Fumarate"
-"logitp2[47,1]",0.47,0.0818504660642202,"Dimethyl Fumarate"
-"logitp2[48,1]",0.48,0.0847809509799166,"Dimethyl Fumarate"
-"logitp2[49,1]",0.49,0.0878013989934449,"Dimethyl Fumarate"
-"logitp2[50,1]",0.5,0.0909162311681506,"Dimethyl Fumarate"
-"logitp2[51,1]",0.51,0.0941301620764152,"Dimethyl Fumarate"
-"logitp2[52,1]",0.52,0.0974482249477316,"Dimethyl Fumarate"
-"logitp2[53,1]",0.53,0.100875799443764,"Dimethyl Fumarate"
-"logitp2[54,1]",0.54,0.104418642389134,"Dimethyl Fumarate"
-"logitp2[55,1]",0.55,0.108082921834558,"Dimethyl Fumarate"
-"logitp2[56,1]",0.56,0.111875254884835,"Dimethyl Fumarate"
-"logitp2[57,1]",0.57,0.115802749789693,"Dimethyl Fumarate"
-"logitp2[58,1]",0.58,0.119873052872356,"Dimethyl Fumarate"
-"logitp2[59,1]",0.59,0.124094400961311,"Dimethyl Fumarate"
-"logitp2[60,1]",0.6,0.128475680097753,"Dimethyl Fumarate"
-"logitp2[61,1]",0.61,0.133026491418102,"Dimethyl Fumarate"
-"logitp2[62,1]",0.62,0.137757225261924,"Dimethyl Fumarate"
-"logitp2[63,1]",0.63,0.142679144735747,"Dimethyl Fumarate"
-"logitp2[64,1]",0.64,0.147804480179179,"Dimethyl Fumarate"
-"logitp2[65,1]",0.65,0.153146536239327,"Dimethyl Fumarate"
-"logitp2[66,1]",0.66,0.158719813573118,"Dimethyl Fumarate"
-"logitp2[67,1]",0.67,0.164540147577283,"Dimethyl Fumarate"
-"logitp2[68,1]",0.68,0.170624867008917,"Dimethyl Fumarate"
-"logitp2[69,1]",0.69,0.176992975926195,"Dimethyl Fumarate"
-"logitp2[70,1]",0.7,0.183665363075611,"Dimethyl Fumarate"
-"logitp2[71,1]",0.71,0.190665043713291,"Dimethyl Fumarate"
-"logitp2[72,1]",0.72,0.198017439917904,"Dimethyl Fumarate"
-"logitp2[73,1]",0.73,0.205750706789831,"Dimethyl Fumarate"
-"logitp2[74,1]",0.74,0.213896113612072,"Dimethyl Fumarate"
-"logitp2[75,1]",0.75,0.222488491174827,"Dimethyl Fumarate"
-"logitp2[76,1]",0.76,0.231566759173939,"Dimethyl Fumarate"
-"logitp2[77,1]",0.77,0.2411745510675,"Dimethyl Fumarate"
-"logitp2[78,1]",0.78,0.251360958265373,"Dimethyl Fumarate"
-"logitp2[79,1]",0.79,0.262181421378127,"Dimethyl Fumarate"
-"logitp2[80,1]",0.8,0.273698803944342,"Dimethyl Fumarate"
-"logitp2[81,1]",0.81,0.285984694262732,"Dimethyl Fumarate"
-"logitp2[82,1]",0.82,0.299120994638399,"Dimethyl Fumarate"
-"logitp2[83,1]",0.83,0.313201875896366,"Dimethyl Fumarate"
-"logitp2[84,1]",0.84,0.328336200449817,"Dimethyl Fumarate"
-"logitp2[85,1]",0.85,0.344650552555346,"Dimethyl Fumarate"
-"logitp2[86,1]",0.86,0.362293064219292,"Dimethyl Fumarate"
-"logitp2[87,1]",0.87,0.38143829661148,"Dimethyl Fumarate"
-"logitp2[88,1]",0.88,0.402293540979327,"Dimethyl Fumarate"
-"logitp2[89,1]",0.89,0.425107058080099,"Dimethyl Fumarate"
-"logitp2[90,1]",0.9,0.450179011389054,"Dimethyl Fumarate"
-"logitp2[91,1]",0.91,0.477876219298871,"Dimethyl Fumarate"
-"logitp2[92,1]",0.92,0.508652450006852,"Dimethyl Fumarate"
-"logitp2[93,1]",0.93,0.543076990071347,"Dimethyl Fumarate"
-"logitp2[94,1]",0.94,0.581875999615733,"Dimethyl Fumarate"
-"logitp2[95,1]",0.95,0.625994532185025,"Dimethyl Fumarate"
-"logitp2[96,1]",0.96,0.676694046789531,"Dimethyl Fumarate"
-"logitp2[97,1]",0.97,0.73571659331698,"Dimethyl Fumarate"
-"logitp2[98,1]",0.98,0.805594145996044,"Dimethyl Fumarate"
-"logitp2[99,1]",0.99,0.890379958399498,"Dimethyl Fumarate"
-"logitp2[1,2]",0.01,0.00178241556040602,"Glatiramer Acetate"
-"logitp2[2,2]",0.02,0.0033981845242787,"Glatiramer Acetate"
-"logitp2[3,2]",0.03,0.00497307665634664,"Glatiramer Acetate"
-"logitp2[4,2]",0.04,0.00653133752304024,"Glatiramer Acetate"
-"logitp2[5,2]",0.05,0.00808431077204835,"Glatiramer Acetate"
-"logitp2[6,2]",0.06,0.00963872521502476,"Glatiramer Acetate"
-"logitp2[7,2]",0.07,0.0111991357233741,"Glatiramer Acetate"
-"logitp2[8,2]",0.08,0.0127689086673751,"Glatiramer Acetate"
-"logitp2[9,2]",0.09,0.0143506967464838,"Glatiramer Acetate"
-"logitp2[10,2]",0.1,0.0159466961229388,"Glatiramer Acetate"
-"logitp2[11,2]",0.11,0.0175587978964561,"Glatiramer Acetate"
-"logitp2[12,2]",0.12,0.0191886832737854,"Glatiramer Acetate"
-"logitp2[13,2]",0.13,0.0208378865296833,"Glatiramer Acetate"
-"logitp2[14,2]",0.14,0.022507838489903,"Glatiramer Acetate"
-"logitp2[15,2]",0.15,0.0241998976973602,"Glatiramer Acetate"
-"logitp2[16,2]",0.16,0.0259153735016891,"Glatiramer Acetate"
-"logitp2[17,2]",0.17,0.027655543692898,"Glatiramer Acetate"
-"logitp2[18,2]",0.18,0.0294216683592603,"Glatiramer Acetate"
-"logitp2[19,2]",0.19,0.0312150010814113,"Glatiramer Acetate"
-"logitp2[20,2]",0.2,0.0330367982196647,"Glatiramer Acetate"
-"logitp2[21,2]",0.21,0.0348883268232551,"Glatiramer Acetate"
-"logitp2[22,2]",0.22,0.0367708715396289,"Glatiramer Acetate"
-"logitp2[23,2]",0.23,0.0386857408003903,"Glatiramer Acetate"
-"logitp2[24,2]",0.24,0.0406342724907845,"Glatiramer Acetate"
-"logitp2[25,2]",0.25,0.0426178392609539,"Glatiramer Acetate"
-"logitp2[26,2]",0.26,0.04463785360284,"Glatiramer Acetate"
-"logitp2[27,2]",0.27,0.0466957727921096,"Glatiramer Acetate"
-"logitp2[28,2]",0.28,0.0487931037769455,"Glatiramer Acetate"
-"logitp2[29,2]",0.29,0.0509314080830076,"Glatiramer Acetate"
-"logitp2[30,2]",0.3,0.0531123067949967,"Glatiramer Acetate"
-"logitp2[31,2]",0.31,0.0553374856691255,"Glatiramer Acetate"
-"logitp2[32,2]",0.32,0.0576087004267783,"Glatiramer Acetate"
-"logitp2[33,2]",0.33,0.0599277822772766,"Glatiramer Acetate"
-"logitp2[34,2]",0.34,0.0622966437166512,"Glatiramer Acetate"
-"logitp2[35,2]",0.35,0.0647172846494358,"Glatiramer Acetate"
-"logitp2[36,2]",0.36,0.0671917988816086,"Glatiramer Acetate"
-"logitp2[37,2]",0.37,0.0697223810348179,"Glatiramer Acetate"
-"logitp2[38,2]",0.38,0.0723113339348967,"Glatiramer Acetate"
-"logitp2[39,2]",0.39,0.0749610765313841,"Glatiramer Acetate"
-"logitp2[40,2]",0.4,0.0776741524093465,"Glatiramer Acetate"
-"logitp2[41,2]",0.41,0.0804532389602657,"Glatiramer Acetate"
-"logitp2[42,2]",0.42,0.0833011572852172,"Glatiramer Acetate"
-"logitp2[43,2]",0.43,0.0862208829110706,"Glatiramer Acetate"
-"logitp2[44,2]",0.44,0.0892155574091466,"Glatiramer Acetate"
-"logitp2[45,2]",0.45,0.0922885010157934,"Glatiramer Acetate"
-"logitp2[46,2]",0.46,0.0954432263658886,"Glatiramer Acetate"
-"logitp2[47,2]",0.47,0.0986834534635362,"Glatiramer Acetate"
-"logitp2[48,2]",0.48,0.102013126029486,"Glatiramer Acetate"
-"logitp2[49,2]",0.49,0.105436429382347,"Glatiramer Acetate"
-"logitp2[50,2]",0.5,0.108957810030865,"Glatiramer Acetate"
-"logitp2[51,2]",0.51,0.112581997177853,"Glatiramer Acetate"
-"logitp2[52,2]",0.52,0.116314026363277,"Glatiramer Acetate"
-"logitp2[53,2]",0.53,0.120159265505157,"Glatiramer Acetate"
-"logitp2[54,2]",0.54,0.124123443633129,"Glatiramer Acetate"
-"logitp2[55,2]",0.55,0.12821268265154,"Glatiramer Acetate"
-"logitp2[56,2]",0.56,0.132433532517985,"Glatiramer Acetate"
-"logitp2[57,2]",0.57,0.13679301028051,"Glatiramer Acetate"
-"logitp2[58,2]",0.58,0.141298643483873,"Glatiramer Acetate"
-"logitp2[59,2]",0.59,0.145958518534271,"Glatiramer Acetate"
-"logitp2[60,2]",0.6,0.15078133470507,"Glatiramer Acetate"
-"logitp2[61,2]",0.61,0.155776464576332,"Glatiramer Acetate"
-"logitp2[62,2]",0.62,0.160954021831781,"Glatiramer Acetate"
-"logitp2[63,2]",0.63,0.166324937492768,"Glatiramer Acetate"
-"logitp2[64,2]",0.64,0.171901045855262,"Glatiramer Acetate"
-"logitp2[65,2]",0.65,0.17769518161972,"Glatiramer Acetate"
-"logitp2[66,2]",0.66,0.18372128997352,"Glatiramer Acetate"
-"logitp2[67,2]",0.67,0.189994551712275,"Glatiramer Acetate"
-"logitp2[68,2]",0.68,0.196531525883543,"Glatiramer Acetate"
-"logitp2[69,2]",0.69,0.203350312921712,"Glatiramer Acetate"
-"logitp2[70,2]",0.7,0.210470741838673,"Glatiramer Acetate"
-"logitp2[71,2]",0.71,0.21791458577036,"Glatiramer Acetate"
-"logitp2[72,2]",0.72,0.225705811091971,"Glatiramer Acetate"
-"logitp2[73,2]",0.73,0.233870866454282,"Glatiramer Acetate"
-"logitp2[74,2]",0.74,0.242439019524961,"Glatiramer Acetate"
-"logitp2[75,2]",0.75,0.251442751029076,"Glatiramer Acetate"
-"logitp2[76,2]",0.76,0.2609182179883,"Glatiramer Acetate"
-"logitp2[77,2]",0.77,0.270905801016327,"Glatiramer Acetate"
-"logitp2[78,2]",0.78,0.2814507543542,"Glatiramer Acetate"
-"logitp2[79,2]",0.79,0.292603982321408,"Glatiramer Acetate"
-"logitp2[80,2]",0.8,0.304422972433402,"Glatiramer Acetate"
-"logitp2[81,2]",0.81,0.316972924183192,"Glatiramer Acetate"
-"logitp2[82,2]",0.82,0.330328124250573,"Glatiramer Acetate"
-"logitp2[83,2]",0.83,0.344573634920465,"Glatiramer Acetate"
-"logitp2[84,2]",0.84,0.359807384588618,"Glatiramer Acetate"
-"logitp2[85,2]",0.85,0.376142780163849,"Glatiramer Acetate"
-"logitp2[86,2]",0.86,0.393712005182428,"Glatiramer Acetate"
-"logitp2[87,2]",0.87,0.412670231212464,"Glatiramer Acetate"
-"logitp2[88,2]",0.88,0.433201064441684,"Glatiramer Acetate"
-"logitp2[89,2]",0.89,0.455523692190235,"Glatiramer Acetate"
-"logitp2[90,2]",0.9,0.479902416457883,"Glatiramer Acetate"
-"logitp2[91,2]",0.91,0.506659619109911,"Glatiramer Acetate"
-"logitp2[92,2]",0.92,0.53619380064096,"Glatiramer Acetate"
-"logitp2[93,2]",0.93,0.569005380656779,"Glatiramer Acetate"
-"logitp2[94,2]",0.94,0.605734891736324,"Glatiramer Acetate"
-"logitp2[95,2]",0.95,0.647222093383807,"Glatiramer Acetate"
-"logitp2[96,2]",0.96,0.694603172026201,"Glatiramer Acetate"
-"logitp2[97,2]",0.97,0.749485286854429,"Glatiramer Acetate"
-"logitp2[98,2]",0.98,0.814307792515682,"Glatiramer Acetate"
-"logitp2[99,2]",0.99,0.893322720172306,"Glatiramer Acetate"
-"logitp2[1,3]",0.01,0.00513832171681099,"Natalizumab"
-"logitp2[2,3]",0.02,0.0072314787143729,"Natalizumab"
-"logitp2[3,3]",0.03,0.00884674584806584,"Natalizumab"
-"logitp2[4,3]",0.04,0.0102202257406836,"Natalizumab"
-"logitp2[5,3]",0.05,0.0114425701161928,"Natalizumab"
-"logitp2[6,3]",0.06,0.0125599701136446,"Natalizumab"
-"logitp2[7,3]",0.07,0.0135997276209802,"Natalizumab"
-"logitp2[8,3]",0.08,0.0145795635093952,"Natalizumab"
-"logitp2[9,3]",0.09,0.0155117539829937,"Natalizumab"
-"logitp2[10,3]",0.1,0.0164052239738324,"Natalizumab"
-"logitp2[11,3]",0.11,0.0172667094097602,"Natalizumab"
-"logitp2[12,3]",0.12,0.0181014491141483,"Natalizumab"
-"logitp2[13,3]",0.13,0.0189136198047179,"Natalizumab"
-"logitp2[14,3]",0.14,0.0197066218833426,"Natalizumab"
-"logitp2[15,3]",0.15,0.0204832741402255,"Natalizumab"
-"logitp2[16,3]",0.16,0.0212459505152903,"Natalizumab"
-"logitp2[17,3]",0.17,0.0219966786992164,"Natalizumab"
-"logitp2[18,3]",0.18,0.0227372128474075,"Natalizumab"
-"logitp2[19,3]",0.19,0.0234690882782001,"Natalizumab"
-"logitp2[20,3]",0.2,0.0241936633509299,"Natalizumab"
-"logitp2[21,3]",0.21,0.0249121520410613,"Natalizumab"
-"logitp2[22,3]",0.22,0.0256256496472032,"Natalizumab"
-"logitp2[23,3]",0.23,0.0263351533495439,"Natalizumab"
-"logitp2[24,3]",0.24,0.0270415788560951,"Natalizumab"
-"logitp2[25,3]",0.25,0.027745774040364,"Natalizumab"
-"logitp2[26,3]",0.26,0.0284485302407897,"Natalizumab"
-"logitp2[27,3]",0.27,0.0291505917261309,"Natalizumab"
-"logitp2[28,3]",0.28,0.0298526637109262,"Natalizumab"
-"logitp2[29,3]",0.29,0.0305554192172615,"Natalizumab"
-"logitp2[30,3]",0.3,0.0312595050139774,"Natalizumab"
-"logitp2[31,3]",0.31,0.0319655468157164,"Natalizumab"
-"logitp2[32,3]",0.32,0.0326741538873999,"Natalizumab"
-"logitp2[33,3]",0.33,0.0333859231716822,"Natalizumab"
-"logitp2[34,3]",0.34,0.0341014430354471,"Natalizumab"
-"logitp2[35,3]",0.35,0.0348212967148583,"Natalizumab"
-"logitp2[36,3]",0.36,0.0355460655257025,"Natalizumab"
-"logitp2[37,3]",0.37,0.0362763318959047,"Natalizumab"
-"logitp2[38,3]",0.38,0.0370126822695207,"Natalizumab"
-"logitp2[39,3]",0.39,0.0377557099257589,"Natalizumab"
-"logitp2[40,3]",0.4,0.0385060177522981,"Natalizumab"
-"logitp2[41,3]",0.41,0.0392642210091036,"Natalizumab"
-"logitp2[42,3]",0.42,0.0400309501169016,"Natalizumab"
-"logitp2[43,3]",0.43,0.0408068535033332,"Natalizumab"
-"logitp2[44,3]",0.44,0.041592600539467,"Natalizumab"
-"logitp2[45,3]",0.45,0.0423888845997657,"Natalizumab"
-"logitp2[46,3]",0.46,0.0431964262797347,"Natalizumab"
-"logitp2[47,3]",0.47,0.044015976807352,"Natalizumab"
-"logitp2[48,3]",0.48,0.0448483216869957,"Natalizumab"
-"logitp2[49,3]",0.49,0.0456942846180223,"Natalizumab"
-"logitp2[50,3]",0.5,0.0465547317344761,"Natalizumab"
-"logitp2[51,3]",0.51,0.0474305762177425,"Natalizumab"
-"logitp2[52,3]",0.52,0.0483227833404462,"Natalizumab"
-"logitp2[53,3]",0.53,0.0492323760077236,"Natalizumab"
-"logitp2[54,3]",0.54,0.0501604408714056,"Natalizumab"
-"logitp2[55,3]",0.55,0.051108135103928,"Natalizumab"
-"logitp2[56,3]",0.56,0.0520766939323153,"Natalizumab"
-"logitp2[57,3]",0.57,0.0530674390488196,"Natalizumab"
-"logitp2[58,3]",0.58,0.0540817880343146,"Natalizumab"
-"logitp2[59,3]",0.59,0.0551212649540857,"Natalizumab"
-"logitp2[60,3]",0.6,0.0561875123141117,"Natalizumab"
-"logitp2[61,3]",0.61,0.0572823046004783,"Natalizumab"
-"logitp2[62,3]",0.62,0.0584075636666521,"Natalizumab"
-"logitp2[63,3]",0.63,0.0595653762848482,"Natalizumab"
-"logitp2[64,3]",0.64,0.0607580142410632,"Natalizumab"
-"logitp2[65,3]",0.65,0.0619879574316013,"Natalizumab"
-"logitp2[66,3]",0.66,0.0632579205161563,"Natalizumab"
-"logitp2[67,3]",0.67,0.0645708838039945,"Natalizumab"
-"logitp2[68,3]",0.68,0.0659301292024887,"Natalizumab"
-"logitp2[69,3]",0.69,0.0673392822504315,"Natalizumab"
-"logitp2[70,3]",0.7,0.0688023615046088,"Natalizumab"
-"logitp2[71,3]",0.71,0.0703238368637654,"Natalizumab"
-"logitp2[72,3]",0.72,0.0719086988221668,"Natalizumab"
-"logitp2[73,3]",0.73,0.0735625411768286,"Natalizumab"
-"logitp2[74,3]",0.74,0.0752916604117811,"Natalizumab"
-"logitp2[75,3]",0.75,0.0771031759107703,"Natalizumab"
-"logitp2[76,3]",0.76,0.0790051763937612,"Natalizumab"
-"logitp2[77,3]",0.77,0.0810068996580298,"Natalizumab"
-"logitp2[78,3]",0.78,0.083118955014724,"Natalizumab"
-"logitp2[79,3]",0.79,0.0853536010178289,"Natalizumab"
-"logitp2[80,3]",0.8,0.0877250955925861,"Natalizumab"
-"logitp2[81,3]",0.81,0.0902501421089997,"Natalizumab"
-"logitp2[82,3]",0.82,0.0929484642864834,"Natalizumab"
-"logitp2[83,3]",0.83,0.0958435566062908,"Natalizumab"
-"logitp2[84,3]",0.84,0.0989636776677349,"Natalizumab"
-"logitp2[85,3]",0.85,0.102343185851151,"Natalizumab"
-"logitp2[86,3]",0.86,0.106024366938799,"Natalizumab"
-"logitp2[87,3]",0.87,0.11005998470067,"Natalizumab"
-"logitp2[88,3]",0.88,0.114516921100799,"Natalizumab"
-"logitp2[89,3]",0.89,0.119481506855488,"Natalizumab"
-"logitp2[90,3]",0.9,0.125067563255186,"Natalizumab"
-"logitp2[91,3]",0.91,0.131428965812137,"Natalizumab"
-"logitp2[92,3]",0.92,0.138780106704427,"Natalizumab"
-"logitp2[93,3]",0.93,0.147430948067018,"Natalizumab"
-"logitp2[94,3]",0.94,0.157850952301642,"Natalizumab"
-"logitp2[95,3]",0.95,0.170795392324554,"Natalizumab"
-"logitp2[96,3]",0.96,0.187582906342333,"Natalizumab"
-"logitp2[97,3]",0.97,0.210803773835171,"Natalizumab"
-"logitp2[98,3]",0.98,0.246595529917284,"Natalizumab"
-"logitp2[99,3]",0.99,0.315824117933829,"Natalizumab"
-"logitp2[1,4]",0.01,0.00236122218408995,"Placebo"
-"logitp2[2,4]",0.02,0.0047604204202435,"Placebo"
-"logitp2[3,4]",0.03,0.00719770484109582,"Placebo"
-"logitp2[4,4]",0.04,0.00967380899191416,"Placebo"
-"logitp2[5,4]",0.05,0.0121895786687946,"Placebo"
-"logitp2[6,4]",0.06,0.0147459202023588,"Placebo"
-"logitp2[7,4]",0.07,0.0173437856400849,"Placebo"
-"logitp2[8,4]",0.08,0.0199841674093557,"Placebo"
-"logitp2[9,4]",0.09,0.0226680964105045,"Placebo"
-"logitp2[10,4]",0.1,0.0253966416327961,"Placebo"
-"logitp2[11,4]",0.11,0.028170910555984,"Placebo"
-"logitp2[12,4]",0.12,0.0309920500111725,"Placebo"
-"logitp2[13,4]",0.13,0.0338612473424124,"Placebo"
-"logitp2[14,4]",0.14,0.0367797317868471,"Placebo"
-"logitp2[15,4]",0.15,0.039748776029158,"Placebo"
-"logitp2[16,4]",0.16,0.0427696979062876,"Placebo"
-"logitp2[17,4]",0.17,0.0458438622498962,"Placebo"
-"logitp2[18,4]",0.18,0.0489726828609062,"Placebo"
-"logitp2[19,4]",0.19,0.0521576246148726,"Placebo"
-"logitp2[20,4]",0.2,0.0554002056998719,"Placebo"
-"logitp2[21,4]",0.21,0.0587019999907214,"Placebo"
-"logitp2[22,4]",0.22,0.0620646395649614,"Placebo"
-"logitp2[23,4]",0.23,0.0654898173673566,"Placebo"
-"logitp2[24,4]",0.24,0.0689792900308295,"Placebo"
-"logitp2[25,4]",0.25,0.0725348808627949,"Placebo"
-"logitp2[26,4]",0.26,0.0761584830068907,"Placebo"
-"logitp2[27,4]",0.27,0.0798520627911151,"Placebo"
-"logitp2[28,4]",0.28,0.0836176632744254,"Placebo"
-"logitp2[29,4]",0.29,0.0874574080049397,"Placebo"
-"logitp2[30,4]",0.3,0.0913735050040373,"Placebo"
-"logitp2[31,4]",0.31,0.0953682509918801,"Placebo"
-"logitp2[32,4]",0.32,0.0994440358712033,"Placebo"
-"logitp2[33,4]",0.33,0.103603347487652,"Placebo"
-"logitp2[34,4]",0.34,0.107848776686494,"Placebo"
-"logitp2[35,4]",0.35,0.112183022687228,"Placebo"
-"logitp2[36,4]",0.36,0.116608898799458,"Placebo"
-"logitp2[37,4]",0.37,0.121129338505396,"Placebo"
-"logitp2[38,4]",0.38,0.125747401936605,"Placebo"
-"logitp2[39,4]",0.39,0.130466282774969,"Placebo"
-"logitp2[40,4]",0.4,0.135289315610561,"Placebo"
-"logitp2[41,4]",0.41,0.140219983792006,"Placebo"
-"logitp2[42,4]",0.42,0.145261927808127,"Placebo"
-"logitp2[43,4]",0.43,0.150418954243234,"Placebo"
-"logitp2[44,4]",0.44,0.155695045352318,"Placebo"
-"logitp2[45,4]",0.45,0.161094369306722,"Placebo"
-"logitp2[46,4]",0.46,0.166621291165667,"Placebo"
-"logitp2[47,4]",0.47,0.172280384634268,"Placebo"
-"logitp2[48,4]",0.48,0.178076444674582,"Placebo"
-"logitp2[49,4]",0.49,0.184014501042701,"Placebo"
-"logitp2[50,4]",0.5,0.190099832832183,"Placebo"
-"logitp2[51,4]",0.51,0.196337984112126,"Placebo"
-"logitp2[52,4]",0.52,0.202734780757199,"Placebo"
-"logitp2[53,4]",0.53,0.20929634857694,"Placebo"
-"logitp2[54,4]",0.54,0.216029132862803,"Placebo"
-"logitp2[55,4]",0.55,0.222939919483985,"Placebo"
-"logitp2[56,4]",0.56,0.23003585767705,"Placebo"
-"logitp2[57,4]",0.57,0.237324484690106,"Placebo"
-"logitp2[58,4]",0.58,0.244813752459969,"Placebo"
-"logitp2[59,4]",0.59,0.252512056520639,"Placebo"
-"logitp2[60,4]",0.6,0.260428267363809,"Placebo"
-"logitp2[61,4]",0.61,0.268571764497461,"Placebo"
-"logitp2[62,4]",0.62,0.27695247347719,"Placebo"
-"logitp2[63,4]",0.63,0.285580906217337,"Placebo"
-"logitp2[64,4]",0.64,0.294468204925762,"Placebo"
-"logitp2[65,4]",0.65,0.303626190047912,"Placebo"
-"logitp2[66,4]",0.66,0.313067412653424,"Placebo"
-"logitp2[67,4]",0.67,0.322805211752835,"Placebo"
-"logitp2[68,4]",0.68,0.332853777094052,"Placebo"
-"logitp2[69,4]",0.69,0.343228218059345,"Placebo"
-"logitp2[70,4]",0.7,0.353944639365267,"Placebo"
-"logitp2[71,4]",0.71,0.365020224361792,"Placebo"
-"logitp2[72,4]",0.72,0.376473326835185,"Placebo"
-"logitp2[73,4]",0.73,0.388323572344175,"Placebo"
-"logitp2[74,4]",0.74,0.40059197026376,"Placebo"
-"logitp2[75,4]",0.75,0.413301037879071,"Placebo"
-"logitp2[76,4]",0.76,0.426474938067244,"Placebo"
-"logitp2[77,4]",0.77,0.440139632333344,"Placebo"
-"logitp2[78,4]",0.78,0.454323051233122,"Placebo"
-"logitp2[79,4]",0.79,0.46905528452817,"Placebo"
-"logitp2[80,4]",0.8,0.484368793786709,"Placebo"
-"logitp2[81,4]",0.81,0.500298650576713,"Placebo"
-"logitp2[82,4]",0.82,0.516882803910516,"Placebo"
-"logitp2[83,4]",0.83,0.534162381207398,"Placebo"
-"logitp2[84,4]",0.84,0.552182027762639,"Placebo"
-"logitp2[85,4]",0.85,0.570990290571862,"Placebo"
-"logitp2[86,4]",0.86,0.590640053387274,"Placebo"
-"logitp2[87,4]",0.87,0.611189031112627,"Placebo"
-"logitp2[88,4]",0.88,0.632700333118283,"Placebo"
-"logitp2[89,4]",0.89,0.655243106825405,"Placebo"
-"logitp2[90,4]",0.9,0.678893275022921,"Placebo"
-"logitp2[91,4]",0.91,0.703734382894975,"Placebo"
-"logitp2[92,4]",0.92,0.729858573682336,"Placebo"
-"logitp2[93,4]",0.93,0.757367715238946,"Placebo"
-"logitp2[94,4]",0.94,0.786374703220355,"Placebo"
-"logitp2[95,4]",0.95,0.81700496936216,"Placebo"
-"logitp2[96,4]",0.96,0.849398222345569,"Placebo"
-"logitp2[97,4]",0.97,0.883710433703003,"Placebo"
-"logitp2[98,4]",0.98,0.920116007205848,"Placebo"
-"logitp2[99,4]",0.99,0.958809654126838,"Placebo"
+"Treatment","Predicted probability to relapse within the next 2 years %","Baseline risk score"
+"Dimethyl Fumarate",8.9176781239407e-14,0.01
+"Dimethyl Fumarate",5.26561595407987e-12,0.02
+"Dimethyl Fumarate",5.86687840683108e-11,0.03
+"Dimethyl Fumarate",3.30374535315657e-10,0.04
+"Dimethyl Fumarate",1.28039743585705e-09,0.05
+"Dimethyl Fumarate",3.91882189401298e-09,0.06
+"Dimethyl Fumarate",1.0193080135552e-08,0.07
+"Dimethyl Fumarate",2.35406637015954e-08,0.08
+"Dimethyl Fumarate",4.96556517767745e-08,0.09
+"Dimethyl Fumarate",9.75299017028118e-08,0.1
+"Dimethyl Fumarate",1.80845175665989e-07,0.11
+"Dimethyl Fumarate",3.19811597650632e-07,0.12
+"Dimethyl Fumarate",5.4357153774602e-07,0.13
+"Dimethyl Fumarate",8.93317410374056e-07,0.14
+"Dimethyl Fumarate",1.42630831931827e-06,0.15
+"Dimethyl Fumarate",2.22101569015155e-06,0.16
+"Dimethyl Fumarate",3.38368412284528e-06,0.17
+"Dimethyl Fumarate",5.05666332123017e-06,0.18
+"Dimethyl Fumarate",7.4289534157129e-06,0.19
+"Dimethyl Fumarate",1.07495134191187e-05,0.2
+"Dimethyl Fumarate",1.53440161040812e-05,0.21
+"Dimethyl Fumarate",2.16358987223485e-05,0.22
+"Dimethyl Fumarate",3.01727657877259e-05,0.23
+"Dimethyl Fumarate",4.16594577432107e-05,0.24
+"Dimethyl Fumarate",5.69994204172277e-05,0.25
+"Dimethyl Fumarate",7.73464106363474e-05,0.26
+"Dimethyl Fumarate",0.000104169073097843,0.27
+"Dimethyl Fumarate",0.000139331547493886,0.28
+"Dimethyl Fumarate",0.000185194043974998,0.29
+"Dimethyl Fumarate",0.000244738298002695,0.3
+"Dimethyl Fumarate",0.000321724030406174,0.31
+"Dimethyl Fumarate",0.000420884054135495,0.32
+"Dimethyl Fumarate",0.000548167558114316,0.33
+"Dimethyl Fumarate",0.000711043448255674,0.34
+"Dimethyl Fumarate",0.000918878540375556,0.35
+"Dimethyl Fumarate",0.00118340900082733,0.36
+"Dimethyl Fumarate",0.00151932785473197,0.37
+"Dimethyl Fumarate",0.00194501677382696,0.38
+"Dimethyl Fumarate",0.00248345685523536,0.39
+"Dimethyl Fumarate",0.00316336081314733,0.4
+"Dimethyl Fumarate",0.00402057794505162,0.41
+"Dimethyl Fumarate",0.00509983324356112,0.42
+"Dimethyl Fumarate",0.00645687261761323,0.43
+"Dimethyl Fumarate",0.00816109630478327,0.44
+"Dimethyl Fumarate",0.0102987701838193,0.45
+"Dimethyl Fumarate",0.0129769062685105,0.46
+"Dimethyl Fumarate",0.0163278931943271,0.47
+"Dimethyl Fumarate",0.0205149253658551,0.48
+"Dimethyl Fumarate",0.0257382107474202,0.49
+"Dimethyl Fumarate",0.0322418101447272,0.5
+"Dimethyl Fumarate",0.0403207448389425,0.51
+"Dimethyl Fumarate",0.0503276659515318,0.52
+"Dimethyl Fumarate",0.0626778658372867,0.53
+"Dimethyl Fumarate",0.0778506979144056,0.54
+"Dimethyl Fumarate",0.0963845677912912,0.55
+"Dimethyl Fumarate",0.11886167581919,0.56
+"Dimethyl Fumarate",0.14587792390818,0.57
+"Dimethyl Fumarate",0.177993418756765,0.58
+"Dimethyl Fumarate",0.215660687259453,0.59
+"Dimethyl Fumarate",0.259132076839688,0.6
+"Dimethyl Fumarate",0.308355420470486,0.61
+"Dimethyl Fumarate",0.362877042161124,0.62
+"Dimethyl Fumarate",0.421780230989856,0.63
+"Dimethyl Fumarate",0.483689671919424,0.64
+"Dimethyl Fumarate",0.546862286806497,0.65
+"Dimethyl Fumarate",0.609361556372907,0.66
+"Dimethyl Fumarate",0.669283197250564,0.67
+"Dimethyl Fumarate",0.724979116532846,0.68
+"Dimethyl Fumarate",0.775225847587868,0.69
+"Dimethyl Fumarate",0.819304118869473,0.7
+"Dimethyl Fumarate",0.856986704696312,0.71
+"Dimethyl Fumarate",0.888457240426306,0.72
+"Dimethyl Fumarate",0.914194066866627,0.73
+"Dimethyl Fumarate",0.934850540311182,0.74
+"Dimethyl Fumarate",0.951152726254143,0.75
+"Dimethyl Fumarate",0.963823696929483,0.76
+"Dimethyl Fumarate",0.973534835371574,0.77
+"Dimethyl Fumarate",0.980879688825744,0.78
+"Dimethyl Fumarate",0.986364284669908,0.79
+"Dimethyl Fumarate",0.990408146071199,0.8
+"Dimethyl Fumarate",0.993351423687374,0.81
+"Dimethyl Fumarate",0.995464897957556,0.82
+"Dimethyl Fumarate",0.996960765374698,0.83
+"Dimethyl Fumarate",0.998002994258717,0.84
+"Dimethyl Fumarate",0.998716632032554,0.85
+"Dimethyl Fumarate",0.999195822951386,0.86
+"Dimethyl Fumarate",0.999510515222961,0.87
+"Dimethyl Fumarate",0.999711952499933,0.88
+"Dimethyl Fumarate",0.999837096231787,0.89
+"Dimethyl Fumarate",0.999912139322509,0.9
+"Dimethyl Fumarate",0.999955265338249,0.91
+"Dimethyl Fumarate",0.999978791772148,0.92
+"Dimethyl Fumarate",0.999990816751581,0.93
+"Dimethyl Fumarate",0.999996469397112,0.94
+"Dimethyl Fumarate",0.999998846442696,0.95
+"Dimethyl Fumarate",0.999999702353134,0.96
+"Dimethyl Fumarate",0.999999947143069,0.97
+"Dimethyl Fumarate",0.999999995256007,0.98
+"Dimethyl Fumarate",0.999999999919657,0.99
+"Glatiramer Acetate",3.34467250828043e-13,0.01
+"Glatiramer Acetate",1.6259754853232e-11,0.02
+"Glatiramer Acetate",1.61495729678828e-10,0.03
+"Glatiramer Acetate",8.37486359005612e-10,0.04
+"Glatiramer Acetate",3.04276599863048e-09,0.05
+"Glatiramer Acetate",8.82916400895789e-09,0.06
+"Glatiramer Acetate",2.19421084091803e-08,0.07
+"Glatiramer Acetate",4.8692504544148e-08,0.08
+"Glatiramer Acetate",9.91195042953502e-08,0.09
+"Glatiramer Acetate",1.88517714742328e-07,0.1
+"Glatiramer Acetate",3.39419700363794e-07,0.11
+"Glatiramer Acetate",5.84145763219068e-07,0.12
+"Glatiramer Acetate",9.68058836766551e-07,0.13
+"Glatiramer Acetate",1.55369398974865e-06,0.14
+"Glatiramer Acetate",2.42597084134266e-06,0.15
+"Glatiramer Acetate",3.6987447794923e-06,0.16
+"Glatiramer Acetate",5.5230112756302e-06,0.17
+"Glatiramer Acetate",8.09714930095917e-06,0.18
+"Glatiramer Acetate",1.16796779626068e-05,0.19
+"Glatiramer Acetate",1.66051088160501e-05,0.2
+"Glatiramer Acetate",2.33036096074597e-05,0.21
+"Glatiramer Acetate",3.23253593205845e-05,0.22
+"Glatiramer Acetate",4.43706766144808e-05,0.23
+"Glatiramer Acetate",6.03272530459945e-05,0.24
+"Glatiramer Acetate",8.13161300305456e-05,0.25
+"Glatiramer Acetate",0.000108748438117545,0.26
+"Glatiramer Acetate",0.000144395385919579,0.27
+"Glatiramer Acetate",0.000190474565011915,0.28
+"Glatiramer Acetate",0.000249756352245849,0.29
+"Glatiramer Acetate",0.000325695073985835,0.3
+"Glatiramer Acetate",0.000422590686537143,0.31
+"Glatiramer Acetate",0.000545788070353668,0.32
+"Glatiramer Acetate",0.000701922688608056,0.33
+"Glatiramer Acetate",0.000899223389518675,0.34
+"Glatiramer Acetate",0.0011478856127941,0.35
+"Glatiramer Acetate",0.00146053127896442,0.36
+"Glatiramer Acetate",0.00185277528673367,0.37
+"Glatiramer Acetate",0.00234392290546575,0.38
+"Glatiramer Acetate",0.00295782749691173,0.39
+"Glatiramer Acetate",0.00372394395610093,0.4
+"Glatiramer Acetate",0.00467861995766867,0.41
+"Glatiramer Acetate",0.00586667429398227,0.42
+"Glatiramer Acetate",0.00734331876761222,0.43
+"Glatiramer Acetate",0.00917648624358907,0.44
+"Glatiramer Acetate",0.01144963079518,0.45
+"Glatiramer Acetate",0.0142650634096312,0.46
+"Glatiramer Acetate",0.0177478736704844,0.47
+"Glatiramer Acetate",0.0220504567947179,0.48
+"Glatiramer Acetate",0.0273576053528804,0.49
+"Glatiramer Acetate",0.0338920202624263,0.5
+"Glatiramer Acetate",0.0419199252341508,0.51
+"Glatiramer Acetate",0.0517562071292656,0.52
+"Glatiramer Acetate",0.0637681251023176,0.53
+"Glatiramer Acetate",0.0783761163561839,0.54
+"Glatiramer Acetate",0.0960495873948237,0.55
+"Glatiramer Acetate",0.117294892690098,0.56
+"Glatiramer Acetate",0.142632158634737,0.57
+"Glatiramer Acetate",0.172557570640948,0.58
+"Glatiramer Acetate",0.207488758260455,0.59
+"Glatiramer Acetate",0.247693644572487,0.6
+"Glatiramer Acetate",0.293208034455282,0.61
+"Glatiramer Acetate",0.343754007458089,0.62
+"Glatiramer Acetate",0.398678139612048,0.63
+"Glatiramer Acetate",0.456932336420989,0.64
+"Glatiramer Acetate",0.517116573304887,0.65
+"Glatiramer Acetate",0.577589889626575,0.66
+"Glatiramer Acetate",0.636636027746379,0.67
+"Glatiramer Acetate",0.692650891608283,0.68
+"Glatiramer Acetate",0.744309989704488,0.69
+"Glatiramer Acetate",0.790680338419219,0.7
+"Glatiramer Acetate",0.831259907630426,0.71
+"Glatiramer Acetate",0.865949427375939,0.72
+"Glatiramer Acetate",0.894977019715196,0.73
+"Glatiramer Acetate",0.91880143602671,0.74
+"Glatiramer Acetate",0.938016121923693,0.75
+"Glatiramer Acetate",0.953268326049044,0.76
+"Glatiramer Acetate",0.965199240901776,0.77
+"Glatiramer Acetate",0.974405103728091,0.78
+"Glatiramer Acetate",0.981415845542813,0.79
+"Glatiramer Acetate",0.986686732757035,0.8
+"Glatiramer Acetate",0.990598652676997,0.81
+"Glatiramer Acetate",0.993463518874907,0.82
+"Glatiramer Acetate",0.995532237482975,0.83
+"Glatiramer Acetate",0.997003535797005,0.84
+"Glatiramer Acetate",0.998032622088942,0.85
+"Glatiramer Acetate",0.998739117420848,0.86
+"Glatiramer Acetate",0.999214009833797,0.87
+"Glatiramer Acetate",0.999525570355913,0.88
+"Glatiramer Acetate",0.999724276454015,0.89
+"Glatiramer Acetate",0.999846841130883,0.9
+"Glatiramer Acetate",0.999919465751352,0.91
+"Glatiramer Acetate",0.999960435892288,0.92
+"Glatiramer Acetate",0.99998217099747,0.93
+"Glatiramer Acetate",0.999992825809639,0.94
+"Glatiramer Acetate",0.999997527570562,0.95
+"Glatiramer Acetate",0.999999319491004,0.96
+"Glatiramer Acetate",0.99999986877475,0.97
+"Glatiramer Acetate",0.999999986787944,0.98
+"Glatiramer Acetate",0.999999999728225,0.99
+"Natalizumab",2.30368967981759e-13,0.01
+"Natalizumab",1.06740648562563e-11,0.02
+"Natalizumab",1.030504128122e-10,0.03
+"Natalizumab",5.23635020212934e-10,0.04
+"Natalizumab",1.87237249075892e-09,0.05
+"Natalizumab",5.36195570860821e-09,0.06
+"Natalizumab",1.31763133723053e-08,0.07
+"Natalizumab",2.89532672045324e-08,0.08
+"Natalizumab",5.8422208490489e-08,0.09
+"Natalizumab",1.10234917954472e-07,0.1
+"Natalizumab",1.97036460592492e-07,0.11
+"Natalizumab",3.36833805298187e-07,0.12
+"Natalizumab",5.54732892737808e-07,0.13
+"Natalizumab",8.85130842318786e-07,0.14
+"Natalizumab",1.3744695085094e-06,0.15
+"Natalizumab",2.08468047675586e-06,0.16
+"Natalizumab",3.0974808255697e-06,0.17
+"Natalizumab",4.51971480257024e-06,0.18
+"Natalizumab",6.4899804863556e-06,0.19
+"Natalizumab",9.18683441112976e-06,0.2
+"Natalizumab",1.28389333434646e-05,0.21
+"Natalizumab",1.77375538055081e-05,0.22
+"Natalizumab",2.42520301180402e-05,0.23
+"Natalizumab",3.28487751407739e-05,0.24
+"Natalizumab",4.41147000515421e-05,0.25
+"Natalizumab",5.87860373194958e-05,0.26
+"Natalizumab",7.77838030679776e-05,0.27
+"Natalizumab",0.000102257421973481,0.28
+"Natalizumab",0.000133638393011918,0.29
+"Natalizumab",0.00017370631430125,0.3
+"Natalizumab",0.000224670130588894,0.31
+"Natalizumab",0.000289268143147336,0.32
+"Natalizumab",0.000370891160604602,0.33
+"Natalizumab",0.000473734209554452,0.34
+"Natalizumab",0.000602983513502843,0.35
+"Natalizumab",0.000765047046035672,0.36
+"Natalizumab",0.000967838939147474,0.37
+"Natalizumab",0.0012211304636016,0.38
+"Natalizumab",0.00153698329146942,0.39
+"Natalizumab",0.00193028440988238,0.4
+"Natalizumab",0.00241940649468241,0.41
+"Natalizumab",0.00302702288425316,0.42
+"Natalizumab",0.00378111260351938,0.43
+"Natalizumab",0.00471619819914938,0.44
+"Natalizumab",0.0058748673544715,0.45
+"Natalizumab",0.0073096380149324,0.46
+"Natalizumab",0.00908523531823798,0.47
+"Natalizumab",0.0112813555447651,0.48
+"Natalizumab",0.0139959950272369,0.49
+"Natalizumab",0.017349416185054,0.5
+"Natalizumab",0.0214888016418157,0.51
+"Natalizumab",0.0265935999769843,0.52
+"Natalizumab",0.0328814770194026,0.53
+"Natalizumab",0.0406146320167635,0.54
+"Natalizumab",0.0501059885808845,0.55
+"Natalizumab",0.0617243907725659,0.56
+"Natalizumab",0.0758973921032975,0.57
+"Natalizumab",0.0931095074109249,0.58
+"Natalizumab",0.113892949323398,0.59
+"Natalizumab",0.138807053772313,0.6
+"Natalizumab",0.1684021693978,0.61
+"Natalizumab",0.203164361269625,0.62
+"Natalizumab",0.243439708336248,0.63
+"Natalizumab",0.289342067284559,0.64
+"Natalizumab",0.340656064030432,0.65
+"Natalizumab",0.396756258428085,0.66
+"Natalizumab",0.456570083800163,0.67
+"Natalizumab",0.518610817121219,0.68
+"Natalizumab",0.581093307915204,0.69
+"Natalizumab",0.642120887481375,0.7
+"Natalizumab",0.699905906268654,0.71
+"Natalizumab",0.752971829184681,0.72
+"Natalizumab",0.800290354473727,0.73
+"Natalizumab",0.84133006967501,0.74
+"Natalizumab",0.87602165503799,0.75
+"Natalizumab",0.904665522918086,0.76
+"Natalizumab",0.927814758981341,0.77
+"Natalizumab",0.946161235765205,0.78
+"Natalizumab",0.96044201399779,0.79
+"Natalizumab",0.971372451220162,0.8
+"Natalizumab",0.979604908190487,0.81
+"Natalizumab",0.985708104753065,0.82
+"Natalizumab",0.990161149611176,0.83
+"Natalizumab",0.993356847881952,0.84
+"Natalizumab",0.995610111314154,0.85
+"Natalizumab",0.997168575765279,0.86
+"Natalizumab",0.998223601101094,0.87
+"Natalizumab",0.998920617686262,0.88
+"Natalizumab",0.999368314712839,0.89
+"Natalizumab",0.999646496122526,0.9
+"Natalizumab",0.999812619189898,0.91
+"Natalizumab",0.999907127794779,0.92
+"Natalizumab",0.999957732742792,0.93
+"Natalizumab",0.999982799373837,0.94
+"Natalizumab",0.999993993546121,0.95
+"Natalizumab",0.99999832020433,0.96
+"Natalizumab",0.999999669418843,0.97
+"Natalizumab",0.999999965758063,0.98
+"Natalizumab",0.999999999260986,0.99
+"Untreated",1.02134103275201e-13,0.01
+"Untreated",6.81761608223557e-12,0.02
+"Untreated",8.16723614842119e-11,0.03
+"Untreated",4.84447825047161e-10,0.04
+"Untreated",1.95559111450585e-09,0.05
+"Untreated",6.19010960214653e-09,0.06
+"Untreated",1.65703947614412e-08,0.07
+"Untreated",3.9244416511329e-08,0.08
+"Untreated",8.46595312739123e-08,0.09
+"Untreated",1.6969196477088e-07,0.1
+"Untreated",3.20549359664835e-07,0.11
+"Untreated",5.76670479465273e-07,0.12
+"Untreated",9.95904554901657e-07,0.13
+"Untreated",1.66132574584526e-06,0.14
+"Untreated",2.69012939337781e-06,0.15
+"Untreated",4.24517068300249e-06,0.16
+"Untreated",6.54984869985652e-06,0.17
+"Untreated",9.90721672629858e-06,0.18
+"Untreated",1.47244218974867e-05,0.19
+"Untreated",2.1543855120278e-05,0.2
+"Untreated",3.108273941042e-05,0.21
+"Untreated",4.42833189541045e-05,0.22
+"Untreated",6.23763540618124e-05,0.23
+"Untreated",8.69613059840794e-05,0.24
+"Untreated",0.000120107444217521,0.25
+"Untreated",0.000164481169551865,0.26
+"Untreated",0.000223506170721438,0.27
+"Untreated",0.000301564684986614,0.28
+"Untreated",0.00040425019094259,0.29
+"Untreated",0.000538684418556501,0.3
+"Untreated",0.00071391472669883,0.31
+"Untreated",0.000941411798124201,0.32
+"Untreated",0.00123569237410668,0.33
+"Untreated",0.00161509753658054,0.34
+"Untreated",0.00210276396849996,0.35
+"Untreated",0.00272783375320851,0.36
+"Untreated",0.00352695756218926,0.37
+"Untreated",0.00454615625030622,0.38
+"Untreated",0.00584311624213925,0.39
+"Untreated",0.00749000326894446,0.4
+"Untreated",0.00957688447687986,0.41
+"Untreated",0.0122158463359457,0.42
+"Untreated",0.0155458780279427,0.43
+"Untreated",0.0197385459091888,0.44
+"Untreated",0.0250043974166426,0.45
+"Untreated",0.0315998783898469,0.46
+"Untreated",0.0398342942288258,0.47
+"Untreated",0.0500759545069855,0.48
+"Untreated",0.0627560762663191,0.49
+"Untreated",0.0783682680502407,0.5
+"Untreated",0.0974605190009057,0.51
+"Untreated",0.120615741634998,0.52
+"Untreated",0.148416434572815,0.53
+"Untreated",0.181389585715634,0.54
+"Untreated",0.219930405054326,0.55
+"Untreated",0.264208683537722,0.56
+"Untreated",0.31406961726012,0.57
+"Untreated",0.368950219580383,0.58
+"Untreated",0.427839033769387,0.59
+"Untreated",0.489305284348167,0.6
+"Untreated",0.551609911654797,0.61
+"Untreated",0.612886877361922,0.62
+"Untreated",0.671357937052753,0.63
+"Untreated",0.725530443016199,0.64
+"Untreated",0.774333498872247,0.65
+"Untreated",0.817169984378656,0.66
+"Untreated",0.853888942818256,0.67
+"Untreated",0.884702409870456,0.68
+"Untreated",0.910077340573995,0.69
+"Untreated",0.93062879311008,0.7
+"Untreated",0.947030700289247,0.71
+"Untreated",0.959950716834222,0.72
+"Untreated",0.970008614575324,0.73
+"Untreated",0.977754018354455,0.74
+"Untreated",0.983658171982439,0.75
+"Untreated",0.988114825086632,0.76
+"Untreated",0.991446366402931,0.77
+"Untreated",0.993912459398572,0.78
+"Untreated",0.995719405409287,0.79
+"Untreated",0.997029189228869,0.8
+"Untreated",0.997967664245196,0.81
+"Untreated",0.998631654919671,0.82
+"Untreated",0.999094944494579,0.83
+"Untreated",0.99941321847732,0.84
+"Untreated",0.999628082060871,0.85
+"Untreated",0.999770284615406,0.86
+"Untreated",0.999862281375262,0.87
+"Untreated",0.999920250554014,0.88
+"Untreated",0.999955668733364,0.89
+"Untreated",0.999976531490939,0.9
+"Untreated",0.999988291395081,0.91
+"Untreated",0.999994572374468,0.92
+"Untreated",0.99999770825545,0.93
+"Untreated",0.999999143884598,0.94
+"Untreated",0.999999729534248,0.95
+"Untreated",0.999999932998994,0.96
+"Untreated",0.999999988704396,0.97
+"Untreated",0.999999999057097,0.98
+"Untreated",0.999999999985874,0.99
