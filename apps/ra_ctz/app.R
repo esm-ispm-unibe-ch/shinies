@@ -15,41 +15,41 @@ stage2.acr$var <- as.factor(stage2.acr$var)
 ui <- fluidPage(
   fluidRow(
     headerPanel(
-      h2("Predicting the Treatment Effect for Individual Rheumatoid Arithritis Patients"), 
-      windowTitle = "Predicting the Treatment Effect for Individual Rheumatoid Arithritis Patients")
+      h2("Estimating Patient-specific Treatment Effects for Rheumatoid Arithritis"), 
+      windowTitle = "Estimating Patient-specific Treatment Effects for Rheumatoid Arithritis")
   ),
   fluidRow(
     navbarPage(theme = shinytheme("flatly"), "Menu",
       tabPanel("Introduction of the study", 
         style = "position:absolute; margin-left: 80px; margin-right: 100px",
-        h3("Predicting the add-on treatment effect of certolizumab for patients with rheumatoid arthritis: a two-stage individual participant data meta-analysis prediction model", align = "center"),
+        h3(strong("Estimating patient-specific relative benefit of adding biologics for rheumatoid arthritis"), align = "center"),
+        h4("A two-stage model based on individual participant data meta-analysis", align = "center"),
         br(),
         p("Current evidence remains ambiguous regarding whether biologics should be prescribed for 
           a rheumatoid arthritis (RA) patient with a specific combination of baseline characteristics. 
           RA is a chronic disease characterized by erosive peripheral arthritis with recurrent flare and 
           remission episodes. To delay structural joint destruction and irreversible deformity on a 
           long-term basis, “treat-to-target” strategy has been recommended to guide treatment selection,
-          where the treatment target is to attain low disease activity or remission within three to six months. 
-          Previous studies have identified some risk factors of poor prognosis, but some were contradictory 
-          and the precise impact of various combinations of such risk factors is still uncertain. Moreover, 
-          most previous studies were intended to predict long-term outcomes, which were not straightforward 
-          to guide drug selection. Lacking of such precise evidence may lead to the “trial-and-error” based 
+          where the treatment target is to attain low disease activity or remission within three to six months.", style = "font-size:19px"), 
+         p("Previous studies have identified some risk factors of poor prognosis, but some were contradictory 
+          and the precise impact of various combinations of such risk factors is still uncertain. Moreover,
+          most previous studies were intended to predict long-term risks instead of relative benefit in comparison with alternative treatment options, 
+          which were not straightforward to guide drug selection. Lacking of such precise evidence may lead to the “trial-and-error” based 
           treatment selection optimal treatment delay. It may also cause overuse of biologics, leading to 
           increased risk of side effects, difficulties in treatment selection for future flares, 
-          loss of response due to anti-drug antibodies, and increased medical expenditures", 
-          style = "font-size:19px"),
-        p(strong("Therefore, our study aims to predict the accurate benefit of adding biologics to csDMARDs 
+          loss of response due to anti-drug antibodies, and increased medical expenditures", style = "font-size:19px"), 
+        p(strong("Therefore, our study aims to estimate the accurate benefit of adding biologics to csDMARDs 
                  (conventional synthetic disease-modifying anti-rheumatic drug) for any specific RA patients 
                  to help with treatment selection. ", style = "color:steelblue"), 
           "We take certolizumab (CTZ) as an example because it is a TNF-alpha inhibitor, the most classic 
           and widely used biologic for RA, and CTZ had plenty of IPD at the time we planned the study. 
-          To achieve this goal, we developed a prediction model to predict the probability of reaching the 
+          To achieve this goal, we developed a model to estimate the probability of reaching the 
           treatment target (i.e., low disease activity or remission at three months) when CTZ was added to 
           csDMARDs or when csDMARDs were used alone, respectively, given the individual baseline characteristics. 
           We fitted the model using a two-stage approach based on IPD-MA (individual participant data meta-analysis).", style = "font-size:19px")
                 ),
       
-      tabPanel("Predicted results from the model",
+      tabPanel("Estimated results from the model",
         sidebarLayout(
           sidebarPanel(width = 3,
             strong("Input your baseline charateristics", style = "font-size: 16px"),
@@ -82,7 +82,7 @@ ui <- fluidPage(
             tabsetPanel(
               tabPanel("Low disease activity or remission",
                 fluidRow(style = "padding-left:20px",
-                  h3("Predicted results:"),
+                  h3("Estimated results:"),
                   h4(uiOutput("pLDA")),
                   br(),
                   div(plotOutput("barplot_lda",width = "80%", height = "550px"), align = "center"),
@@ -91,17 +91,17 @@ ui <- fluidPage(
                 ),
                 fluidRow(style = "padding-left:10px; padding-top:10px; border-left:2px solid steelblue; border-top:2px solid steelblue; border-right:2px solid steelblue;margin-border:10px", 
                   column(7,
-                    p("*Prediction process and predicted results for any patients are shown in the plots below.", style = "font-weight:bold;font-size:18px;color:lightslategray"),
+                    p("*Estimation process and estimated results for any patients are shown in the plots below.", style = "font-weight:bold;font-size:18px;color:lightslategray"),
                     textOutput("base_riskLDA"),
                     tags$head(tags$style("#base_riskLDA{font-size:16px;color:lightslategray}")),
-                    p("(For your reference, the plot on the right shows the predicted baseline expected probabilities in our study population.)", 
+                    p("(For your reference, the plot on the right shows the estimated baseline expected probabilities in our study population.)", 
                       style = "font-size:14px; font-style:italic; color:darkgray"),
                     p("(2) At stage two, the probability of low disease activity or remission when adding CTZ or csDMARDs alone respectively ",
                       strong("(Plot A below)", style = "font-style:italic"), 
                       " and the risk difference between the two treatments ",
-                      strong("(Plot B below)", style = "font-style:italic"), "are predicted. The ", 
+                      strong("(Plot B below)", style = "font-style:italic"), "are estimated. The ", 
                       strong("pink dashed line ", style = "font-style:italic;color:#EE6AA7"),
-                      "shows the predicted baseline expected probability of the outcome at stage one. It will change interactively when altering the baseline characteristics.",
+                      "shows the estimated baseline expected probability of the outcome at stage one. It will change interactively when altering the baseline characteristics.",
                       style = "font-size:16px;color:lightslategray")),
                   column(5,
                          br(), 
@@ -115,7 +115,7 @@ ui <- fluidPage(
               ),
               tabPanel("ACR50 response",
                        fluidRow(style = "padding-left:20px",
-                                h3("Predicted results:"),
+                                h3("Estimated results:"),
                                 h4(uiOutput("pACR")),
                                 br(),
                                 div(plotOutput("barplot_acr",width = "80%", height = "550px"), align = "center"),
@@ -123,17 +123,17 @@ ui <- fluidPage(
                        ),
                        fluidRow(style = "padding-left:10px; padding-top:10px; border-left:2px solid steelblue; border-top:2px solid steelblue; border-right:2px solid steelblue;margin-border:10px", 
                          column(7, 
-                                p("Prediction process and predicted results for any patients are shown in the plots below.", style = "font-weight:bold;font-size:18px;color:lightslategray"),
+                                p("Estimation process and estimated results for any patients are shown in the plots below.", style = "font-weight:bold;font-size:18px;color:lightslategray"),
                                 textOutput("base_riskACR"),
                                 tags$head(tags$style("#base_riskACR{font-size:16px}")),
-                                p("(For your reference, the plot on the right shows the predicted baseline expected probabilities in our study population.)", 
+                                p("(For your reference, the plot on the right shows the estimated baseline expected probabilities in our study population.)", 
                                   style = "font-size:14px; font-style:italic; color:darkgray"),
                                 p("(2) At stage two, the probability of ACR50 response when adding CTZ or csDMARDs alone respectively ",
                                   strong("(Plot A below)", style = "font-style:italic"), 
                                   " and the risk difference between the two treatments ",
-                                  strong("(Plot B below)", style = "font-style:italic"), "are predicted. The ", 
+                                  strong("(Plot B below)", style = "font-style:italic"), "are estimated. The ", 
                                   strong("pink dashed line ", style = "font-style:italic;color:#EE6AA7"),
-                                  "shows the predicted baseline expected probability of the outcome at stage one. It will change interactively when altering the baseline characteristics.",
+                                  "shows the estimated baseline expected probability of the outcome at stage one. It will change interactively when altering the baseline characteristics.",
                                   style = "font-size:16px;color:lightslategray")),
                          column(5,
                                 br(), 
@@ -312,8 +312,8 @@ ui <- fluidPage(
     column(10, 
            strong("Please cite:", style = "color:rgba(21,45,70,1)"),
            p("Luo Y, Chalkou K, Funada S, Salanti G, Furukawa TA. 
-             Predicting the Add-on Treatment Effect of Certolizumab for Patients with Rheumatoid Arthritis: 
-             A Two-Stage Individual Participant Data Meta-Analysis Prediction Model.", em(" (Submitted)"), style = "font-size: 14px; color:rgba(21,45,70,1)")
+             Estimating patient-specific relative benefit of adding biologics for rheumatoid arthritis: 
+             A two-stage model based on individual participant data meta-analysis.", em(" (Submitted)"), style = "font-size: 14px; color:rgba(21,45,70,1)")
     )
   )
 )
@@ -387,11 +387,12 @@ server <- function(input, output, session) {
                             fill=c("out", "in", "out"))
     
     p1 <- ggplot(data = pred_p_plot, aes(x=risk.bas, y=estimate)) +
-      ggtitle("(A) Predicted probability of the outcome after 3-month treatment") +
+      ggtitle("(A) Estimated probability of the outcome after 3-month treatment") +
       xlab("Baseline expected probability of low disease activity or remission at stage one") +
-      ylab("Predicted probability of low disease activity or remission after treatment at 3-month") +
-      scale_y_continuous(limits = c(-0.03, 1), breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-      geom_point(aes(group=var, col=var), size=1, alpha=0.7) +
+      ylab("Estimated probability of low disease activity or remission after treatment at 3-month") +
+      scale_y_continuous(limits = c(-0.04, 1), breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+      geom_point(aes(group=var, col=var), size=0.5, alpha=0.7) +
+      geom_line(aes(group=var, col=var), linewidth=1) +
       scale_color_manual(name="Treatment", 
                          values=c("deepskyblue3", "goldenrod1"),
                          labels=c("CTZ+csDMARDs", "Placebo+csDMARDs")) +
@@ -415,12 +416,13 @@ server <- function(input, output, session) {
                             fill=c("out", "in", "out"))
     
     p2 <- ggplot() +
-      ggtitle("(B) Predicted risk difference between two treatments after 3-month") +
+      ggtitle("(B) Estimated risk difference between two treatments after 3-month") +
       xlab("Baseline expected probability of low disease activity or remission at stage one)") +
-      ylab("Predicted risk difference after treatment at 3-month") +
-      scale_y_continuous(limits = c(-0.03, 1), breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-      geom_point(data = rd_plot, aes(x=risk.bas, y=estimate, group=var, col=var), size=2, alpha=0.7) +
-      scale_color_manual(name="Effect measure", 
+      ylab("Estimated risk difference after treatment at 3-month") +
+      scale_y_continuous(limits = c(-0.04, 1), breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
+      geom_point(data = rd_plot, aes(x=risk.bas, y=estimate, group=var, col=var), size=0.5, alpha=0.7) +
+      geom_line(data = rd_plot, aes(x=risk.bas, y=estimate, group=var, col=var), linewidth=1) +
+      scale_color_manual(name="", 
                          values=c("red2"),
                          labels=c("Risk difference")) +
       geom_vline(xintercept=c(0.0288238, 0.8680566), col="darkgray", lty=2) +
@@ -441,11 +443,12 @@ server <- function(input, output, session) {
                             fill=c("out", "in", "out"))
     
     p1 <- ggplot(data = pred_p_plot, aes(x=risk.bas, y=estimate)) +
-      ggtitle("(A) Predicted probability of the outcome after 3-month treatment") +
+      ggtitle("(A) Estimated probability of the outcome after 3-month treatment") +
       xlab("Baseline expected probability of ACR50 response at stage one") +
-      ylab("Predicted probability of ACR50 response after treatment at 3-month") +
+      ylab("Estimated probability of ACR50 response after treatment at 3-month") +
       scale_y_continuous(limits = c(-0.15, 1), breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-      geom_point(aes(group=var, col=var), size=1, alpha=0.7) +
+      geom_point(aes(group=var, col=var), size=0.5, alpha=0.7) +
+      geom_line(aes(group=var, col=var), linewidth=1) +
       scale_color_manual(name="Treatment", 
                          values=c("deepskyblue3", "goldenrod1"),
                          labels=c("CTZ+csDMARDs", "Placebo+csDMARDs")) +
@@ -469,12 +472,13 @@ server <- function(input, output, session) {
                             fill=c("out", "in", "out"))
     
     p2 <- ggplot() +
-      ggtitle("(B) Predicted risk difference between two treatments after 3-month") +
+      ggtitle("(B) Estimated risk difference between two treatments after 3-month") +
       xlab("Baseline expected probability of ACR50 response at stage one)") +
-      ylab("Predicted risk difference after treatment at 3-month") +
+      ylab("Estimated risk difference after treatment at 3-month") +
       scale_y_continuous(limits = c(-0.15, 1), breaks = c(0,0.2,0.4,0.6,0.8,1.0)) +
-      geom_point(data = rd_plot, aes(x=risk.bas, y=estimate, group=var, col=var), size=2, alpha=0.7) +
-      scale_color_manual(name="Effect measure", 
+      geom_point(data = rd_plot, aes(x=risk.bas, y=estimate, group=var, col=var), size=0.5, alpha=0.7) +
+      geom_line(data = rd_plot, aes(x=risk.bas, y=estimate, group=var, col=var), linewidth=1) +
+      scale_color_manual(name="", 
                          values=c("red2"),
                          labels=c("Risk difference")) +
       geom_vline(xintercept=c(0.0727, 0.7922), col="darkgray", lty=2) +
@@ -502,7 +506,7 @@ server <- function(input, output, session) {
       need(as.numeric(input$rf)>=0, "Please input the RF result in terms of IU/mL."),
       need(as.numeric(input$haq)>=0 & as.numeric(input$haq)<=3, "Please input a valid HAQ-DI score: 0~3.")
     )
-    paste("(1) At stage one, a baseline expected probability of the outcome regardless of treatment is predicted: ", round(stage1Input()[["base_riskLDA"]]*100, digits = 2), "%.")
+    paste("(1) At stage one, a baseline expected probability of the outcome regardless of treatment is estimated: ", round(stage1Input()[["base_riskLDA"]]*100, digits = 2), "%.")
   })
   
   output$base_riskACR <- renderText({
@@ -518,7 +522,7 @@ server <- function(input, output, session) {
       need(as.numeric(input$rf)>=0, "Please input the RF result in terms of IU/mL."),
       need(as.numeric(input$haq)>=0 & as.numeric(input$haq)<=3, "Please input a valid HAQ-DI score: 0~3.")
     )
-    paste("(1) At stage one, a baseline expected probability of the outcome regardless of treatment is predicted: ", round(stage1Input()[["base_riskACR"]]*100, digits = 2), "%.")
+    paste("(1) At stage one, a baseline expected probability of the outcome regardless of treatment is estimated: ", round(stage1Input()[["base_riskACR"]]*100, digits = 2), "%.")
   })
   
   
@@ -536,11 +540,11 @@ server <- function(input, output, session) {
       need(as.numeric(input$haq)>=0 & as.numeric(input$haq)<=3, "Please input a valid HAQ-DI score: 0~3.")
     )
 
-    placebo.str <- paste("If you use ", "<font color=\"#FFC125\">", "csDMARDs alone", "</font>", ", the probability of achieving low disease activity or remission in 3 months will be", 
+    placebo.str <- paste("If you take ", "<font color=\"#FFC125\">", "csDMARDs alone", "</font>", ", the probability of achieving low disease activity or remission in 3 months will be", 
                          round(stage2Input()[["p_placeboLDA"]]*100, digits = 2), "% (95%CrI, ", 
                          round(stage2Input()[["p_placeboLDA.lo"]]*100, digits = 2), "% to ",
                          round(stage2Input()[["p_placeboLDA.up"]]*100, digits = 2), "%).")
-    ctz.str <- paste("If you use ", "<font color=\"#009ACD\">", "csDMARDs plus certolizumab", "</font>", ", the probability of achieving low disease activity or remission in 3 months will be", 
+    ctz.str <- paste("If you take ", "<font color=\"#009ACD\">", "csDMARDs plus certolizumab", "</font>", ", the probability of achieving low disease activity or remission in 3 months will be", 
                      round(stage2Input()[["p_ctzLDA"]]*100, digits = 2), "% (95%CrI, ",
                      round(stage2Input()[["p_ctzLDA.lo"]]*100, digits = 2), "% to ",
                      round(stage2Input()[["p_ctzLDA.up"]]*100, digits = 2), "%).")
@@ -565,11 +569,11 @@ server <- function(input, output, session) {
       need(as.numeric(input$haq)>=0 & as.numeric(input$haq)<=3, "Please input a valid HAQ-DI score: 0~3.")
     )
     
-    placebo.str <- paste("If you use ", "<font color=\"#FFC125\">", "csDMARDs alone", "</font>", ", the probability of achieving 50% improvement (ACR50) in 3 months will be", 
+    placebo.str <- paste("If you take ", "<font color=\"#FFC125\">", "csDMARDs alone", "</font>", ", the probability of achieving 50% improvement (ACR50) in 3 months will be", 
                          round(stage2Input()[["p_placeboACR"]]*100, digits = 2), "% (95%CrI, ", 
                          round(stage2Input()[["p_placeboACR.lo"]]*100, digits = 2), "% to ",
                          round(stage2Input()[["p_placeboACR.up"]]*100, digits = 2), "%).")
-    ctz.str <- paste("If you use ", "<font color=\"#009ACD\">", "csDMARDs plus certolizumab", "</font>", ", the probability of achieving 50% improvement (ACR50) in 3 months will be", 
+    ctz.str <- paste("If you take ", "<font color=\"#009ACD\">", "csDMARDs plus certolizumab", "</font>", ", the probability of achieving 50% improvement (ACR50) in 3 months will be", 
                      round(stage2Input()[["p_ctzACR"]]*100, digits = 2), "% (95%CrI, ",
                      round(stage2Input()[["p_ctzACR.lo"]]*100, digits = 2), "% to ",
                      round(stage2Input()[["p_ctzACR.up"]]*100, digits = 2), "%).")
@@ -632,15 +636,15 @@ server <- function(input, output, session) {
   
  
   output$plot_lda <- renderPlot({
-    p1 <- p1ldaInput() + geom_vline(xintercept=stage1Input()[["base_riskLDA"]], col="hotpink2", lty=2, size=0.8)
-    p2 <- p2ldaInput() + geom_vline(xintercept=stage1Input()[["base_riskLDA"]], col="hotpink2", lty=2, size=0.8)
+    p1 <- p1ldaInput() + geom_vline(xintercept=stage1Input()[["base_riskLDA"]], col="hotpink2", lty=2, linewidth=0.8)
+    p2 <- p2ldaInput() + geom_vline(xintercept=stage1Input()[["base_riskLDA"]], col="hotpink2", lty=2, linewidth=0.8)
     p <- ggarrange(p1, p2, ncol=1)
     
   })
   
   output$plot_acr <- renderPlot({
-    p1 <- p1acrInput() + geom_vline(xintercept=stage1Input()[["base_riskACR"]], col="hotpink2", lty=2, size=0.8)
-    p2 <- p2acrInput() + geom_vline(xintercept=stage1Input()[["base_riskACR"]], col="hotpink2", lty=2, size=0.8)
+    p1 <- p1acrInput() + geom_vline(xintercept=stage1Input()[["base_riskACR"]], col="hotpink2", lty=2, linewidth=0.8)
+    p2 <- p2acrInput() + geom_vline(xintercept=stage1Input()[["base_riskACR"]], col="hotpink2", lty=2, linewidth=0.8)
     
     p <- ggarrange(p1, p2, ncol=1)
     
