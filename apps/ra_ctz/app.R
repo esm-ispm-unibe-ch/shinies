@@ -312,8 +312,8 @@ ui <- fluidPage(
     column(10, 
            strong("Please cite:", style = "color:rgba(21,45,70,1)"),
            p("Luo Y, Chalkou K, Funada S, Salanti G, Furukawa TA. 
-             Estimating patient-specific relative benefit of adding biologics for rheumatoid arthritis: 
-             A two-stage model based on individual participant data meta-analysis.", em(" (Submitted)"), style = "font-size: 14px; color:rgba(21,45,70,1)")
+             Estimating Patient-Specific Relative Benefit of Adding Biologics to Conventional Rheumatoid Arthritis Treatment: 
+             An Individual Participant Data Meta-Analysis.", em(" JAMA Network Open"), " 2023;6(6):e2321398. doi:10.1001/jamanetworkopen.2023.21398", style = "font-size: 14px; color:rgba(21,45,70,1)")
     )
   )
 )
